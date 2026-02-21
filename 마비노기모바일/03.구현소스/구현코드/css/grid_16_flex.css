@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+/* 그리드 시스템 16그리드적용 - 가로비율 */
+.col-1 {flex-basis: 6.25%;}
+.col-2 {flex-basis: 12.5%;}
+.col-3 {flex-basis: 18.75%;}
+.col-4 {flex-basis: 25%;}
+.col-5 {flex-basis: 31.25%;}
+.col-6 {flex-basis: 37.5%;}
+.col-7 {flex-basis: 43.75%;}
+.col-8 {flex-basis: 50%;}
+.col-9 {flex-basis: 56.25%;}
+.col-10 {flex-basis: 62.5%;}
+.col-11 {flex-basis: 68.75%;}
+.col-12 {flex-basis: 75%;}
+.col-13 {flex-basis: 81.25%;}
+.col-14 {flex-basis: 87.5%;}
+.col-15 {flex-basis: 93.75%;}
+.col-16 {flex-basis: 100%;}
+
+/* 컨텐트 박스 
+-> 플렉스 박스는 싸고 있는 부모를 설정함! */
+.cont-box{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login 페이지</title>
+
+    <!-- 스와이퍼 CDN CSS -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+
+    <!-- 로그인 CSS -->
+    <link rel="stylesheet" href="css/login.css" />
+
+    <!-- 메인 미디어쿼리 CSS -->
+    <link rel="stylesheet" href="css/media_main.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 메인 JS -->
+    <script src="js/login.js" defer></script>
+  </head>
+  <body>
+    <div id="login-page">
+      <!-- 로고/로그인 종류 -->
+      <div class="header">
+        <h1 class="logo">
+          <a href="#"></a>
+        </h1>
+        <div class="tab-type">
+          <ul>
+            <li class="nexon">
+              <button>넥슨ID 로그인</button>
+            </li>
+            <li class="otp">
+              <button>일회용 로그인</button>
+            </li>
+            <li class="qr">
+              <button>QR 로그인</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 로그인~계정로그인 -->
+      <div class="loginsec">
+        <!-- 로그인 입력 -->
+        <div class="login-input">
+          <div class="input-group">
+            <input
+              type="text"
+              id="user-id"
+              placeholder="넥슨ID (아이디 또는 이메일)"
+            />
+            <p class="error-msg" id="id-error"></p>
+          </div>
+          <div class="input-group">
+            <input type="password" id="user-pw" placeholder="비밀번호" />
+            <p class="error-msg" id="pw-error"></p>
+          </div>
+          <div class="save-id">
+            <input type="checkbox" id="save-check" />
+            <label for="save-check">로그인 상태 유지</label>
+          </div>
+          <div class="login-btn">
+            <button>넥슨ID 로그인</button>
+          </div>
+        </div>
+        <!-- 회원가입/정보찾기 -->
+        <div class="login-find">
+          <a href="#">회원가입</a>
+          <a href="#">넥슨ID 찾기</a>
+          <a href="#">비밀번호 찾기</a>
+        </div>
+        <!-- 계정로그인 -->
+        <div class="other-login">
+          <button class="facebook-btn">
+            <span class="other-group">
+              <span class="login-icon"></span>
+              <span class="login-text">Facebook 계정으로 로그인</span>
+            </span>
+          </button>
+          <button class="google-btn">
+            <span class="other-group">
+              <span class="login-icon"></span>
+              <span class="login-text">Google 계정으로 로그인</span>
+            </span>
+          </button>
+          <button class="naver-btn">
+            <span class="other-group">
+              <span class="login-icon"></span>
+              <span class="login-text">Naver 계정으로 로그인</span>
+            </span>
+          </button>
+          <button class="apple-btn">
+            <span class="other-group">
+              <span class="login-icon"></span>
+              <span class="login-text">Apple 계정으로 로그인</span>
+            </span>
+          </button>
+        </div>
+        <!-- 일회용 로그인 -->
+        <div class="otp-content">
+          <div class="otp-login">
+            <p>
+              <strong>넥슨플레이>넥슨인증기>일회용 로그인</strong>에서 8자리
+              숫자를 입력해주세요.
+            </p>
+          </div>
+          <div class="otp-input-group">
+            <input
+              type="text"
+              id="otp-first"
+              placeholder="4자리"
+              maxlength="4"
+            />
+            <input
+              type="text"
+              id="otp-second"
+              placeholder="4자리"
+              maxlength="4"
+            />
+          </div>
+          <div class="login-btn otp-login-btn">
+            <button>일회용 로그인</button>
+          </div>
+          <div class="otp-guide">
+            <h3>일회용 로그인 이용 가이드</h3>
+            <a href="#" class="nexon-play-link">넥슨플레이 안내></a>
+            <ol>
+              <li>넥슨플레이 앱을 실행시켜주세요.</li>
+              <li>
+                메뉴 탭에서 [넥슨인증기] 메뉴를 클릭, [일회용 로그인] 버튼을
+                클릭해주세요.
+              </li>
+              <li>8자리 번호를 입력하고 로그인 버튼을 클릭해주세요.</li>
+            </ol>
+          </div>
+        </div>
+        <!-- QR로그인 -->
+        <div class="qr-content">
+          <div class="qr-login">
+            <p>
+              <strong>넥슨플레이>QR 스캐너>QR 코드 촬영>바이오 인증</strong>
+              진행 후 <br />QR 로그인 버튼을 클릭해주세요.
+            </p>
+          </div>
+          <div class="qr-code-box">
+            <img src="./image/qrcode.png" alt="QR 코드" />
+            <p class="qr-timer">유효시간 02:59</p>
+          </div>
+          <div class="login-btn qr-login-btn">
+            <button>QR 로그인</button>
+          </div>
+          <div class="qr-guide">
+            <h3>QR 로그인 이용 가이드</h3>
+            <a href="#" class="nexon-play-link">넥슨플레이 안내></a>
+            <ol>
+              <li>
+                모바일기기로 QR코드를 촬영해주세요.
+                <a href="#" class="qr-link">QR 스캐너 위치 보기</a>
+              </li>
+              <li>
+                바이오인증의 인증 승인 메시지에서 지문인식을 해주세요. (또는
+                Face ID)
+              </li>
+              <li>인증완료 후 [QR 로그인]을 클릭해주세요.</li>
+            </ol>
+          </div>
+        </div>
+        <!-- 공홈 돌아가기 -->
+        <div class="home-btn">
+          <a href="index.html">
+            <img src="./image/home.webp" alt="" />
+            <p>돌아가기</p>
+          </a>
+        </div>
+      </div>
+      <!-- 하단 -->
+      <div class="footer">
+        <p>© NEXON Korea Corporation All Rights Reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>

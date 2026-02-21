@@ -1,0 +1,511 @@
+@charset "UTF-8";
+
+/* 외부 CSS 불러오기 */
+@import url(./reset.css);
+@import url(./core.css);
+/* 16그리드 CSS */
+@import url(./grid_16_flex.css);
+
+/* 공사중 표시 */
+/* body * {
+  outline: 2px dashed blue;
+} */
+
+#login-page {
+  position: relative;
+  max-width: 492px;
+  min-width: 360px;
+  min-height: 100vh;
+  padding: 0 16px 200px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.header {
+  min-width: 328px;
+  padding-top: 120px;
+  text-align: center;
+}
+
+/* 로고 */
+.header .logo {
+  display: inline-block;
+  margin: 0 auto;
+  width: 120px;
+  height: 20px;
+}
+
+.header .logo a {
+  display: block;
+  width: 120px;
+  height: 20px;
+  background: url(../image/nexon_logo.svg) no-repeat 0 0;
+}
+
+/* 로그인 탭 */
+.tab-type {
+  display: block;
+  height: 33px;
+  margin-top: 27px;
+}
+
+.tab-type ul {
+  display: inline-block;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* 로그인 종류 */
+.tab-type li {
+  position: relative;
+  float: left;
+  display: block;
+}
+
+.tab-type button {
+  position: relative;
+  width: 105px;
+  height: 34px;
+  font-weight: bold;
+  color: #aaaaaa;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* 활성화된 탭 스타일 */
+.tab-type li.nexon button {
+  color: #000;
+}
+
+.tab-type li.nexon button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+/* 버튼 hover 효과 */
+.tab-type button:hover {
+  color: #00b670;
+}
+
+/* 로그인 섹션 */
+.loginsec {
+  margin-top: 24px;
+}
+
+.login-input {
+  padding-top: 30px;
+}
+
+/* 입력 필드 그룹 */
+.login-input .input-group {
+  position: relative;
+  height: 64px;
+}
+
+/* 입력 필드 스타일 */
+.login-input input[type="text"],
+.login-input input[type="password"] {
+  width: 100%;
+  height: 52px;
+  font-size: 16px;
+  padding: 0 16px;
+  border: 1px solid #e5e8eb;
+  border-radius: 2px;
+  box-sizing: border-box;
+  background-color: #fff;
+  transition: border-color 0.2s linear;
+}
+
+.login-input input[type="text"]:focus,
+.login-input input[type="password"]:focus {
+  border: 2px solid #2baf7e;
+  outline: none;
+  transition: border-color 0.2s linear;
+}
+
+.login-input input[type="text"]::placeholder,
+.login-input input[type="password"]::placeholder {
+  color: #cccccc;
+}
+
+/* 에러 메시지 */
+.login-input .error-msg {
+  display: none;
+  margin: 8px 0;
+  font-size: 12px;
+  color: #ff0000;
+  line-height: 1.4;
+  min-height: 0;
+}
+
+.login-input .error-msg.show {
+  display: block;
+  min-height: 17px;
+}
+
+/* 에러가 있을 때 input-group 간격 조정 */
+.login-input .input-group:has(.error-msg.show) {
+  margin-bottom: 16px;
+}
+
+/* 로그인 상태 유지 체크박스 */
+.login-input .save-id {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.login-input .save-id input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: #000;
+}
+
+.login-input .save-id label {
+  margin-left: 8px;
+  font-size: 13px;
+  color: #666666;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 로그인 입력 */
+.login-btn button {
+  width: 100%;
+  height: 60px;
+  background: #000;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login-btn button:hover {
+  border: none;
+  background-color: #2baf7e;
+}
+
+/* 회원가입/정보찾기 */
+.login-find {
+  position: relative;
+  height: 40px;
+  padding-top: 12px;
+  box-sizing: border-box;
+}
+
+.login-find a {
+  color: #aaaaaa;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.login-find a:hover {
+  color: #00b670;
+}
+
+/* 계정 로그인 전체 */
+.other-login {
+  padding-top: 30px;
+}
+
+/* 계정 로그인 버튼 */
+.other-login button {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 0 0 15px;
+  margin-top: 6px;
+  border: 1px solid #525252;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #525252;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.other-login button:first-child {
+  margin-top: 0;
+}
+
+/* 계정 로그인 버튼 마우스 오버시 */
+.other-login button:hover {
+  background-color: #eee;
+}
+
+/* 계정 로그인 span 그룹 */
+.other-login .other-group {
+  height: 20px;
+  display: flex;
+  justify-items: center;
+}
+
+/* 계정 로그인 아이콘 넣기 */
+.other-login .login-icon {
+  width: 22px;
+  height: 22px;
+  background: url(../image/nexon_logo.svg) no-repeat 0 -50px;
+}
+
+/* 계정 로그인 각 아이콘 넣기 */
+.other-login .facebook-btn .login-icon {
+  background-position: 0 -100px;
+}
+.other-login .google-btn .login-icon {
+  background-position: 0 -150px;
+}
+.other-login .naver-btn .login-icon {
+  background-position: 0 -200px;
+}
+.other-login .apple-btn .login-icon {
+  background-position: 0 -250px;
+}
+
+/* 계정 로그인 텍스트 */
+.other-login .login-text {
+  padding-left: 20px;
+}
+
+/* 탭 전환 시 숨김 처리 */
+.login-input.hidden {
+  display: none;
+}
+
+.login-find.hidden {
+  display: none;
+}
+
+.other-login.hidden {
+  display: none;
+}
+
+/* OTP, QR 로그인 컨텐츠 영역 */
+.otp-content,
+.qr-content {
+  display: none;
+  padding-top: 10px;
+}
+
+.otp-content.active,
+.qr-content.active {
+  display: block;
+}
+
+/* 일회용 로그인 스타일 */
+.otp-login {
+  margin-bottom: 25px;
+}
+
+.otp-login p {
+  font-size: 12px;
+  color: #737881;
+  text-align: center;
+}
+
+.otp-input-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.otp-input-group input {
+  height: 52px;
+  font-size: 16px;
+  padding: 0 16px;
+  border: 1px solid #e5e8eb;
+  border-radius: 2px;
+  box-sizing: border-box;
+  background-color: #fff;
+  transition: border-color 0.2s linear;
+}
+
+.otp-input-group input:last-child {
+  flex: 1;
+}
+
+.otp-input-group input:focus {
+  border: 2px solid #2baf7e;
+  outline: none;
+}
+
+.otp-input-group input::placeholder {
+  color: #cccccc;
+}
+
+.otp-login-btn {
+  margin-bottom: 80px;
+}
+
+.otp-guide,
+.qr-guide {
+  position: relative;
+  padding-top: 20px;
+  border-top: 1px solid #e5e8eb;
+}
+
+.otp-guide h3,
+.qr-guide h3 {
+  font-size: 12px;
+  color: #737881;
+  font-weight: bold;
+}
+
+.otp-guide .nexon-play-link,
+.qr-guide .nexon-play-link {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  font-size: 12px;
+  color: #9fa1a7;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.otp-guide .nexon-play-link:hover,
+.qr-guide .nexon-play-link:hover {
+  color: #00b670;
+}
+
+.otp-guide ol,
+.qr-guide ol {
+  list-style: none;
+  counter-reset: item;
+  padding-top: 10px;
+}
+
+.otp-guide ol li,
+.qr-guide ol li {
+  position: relative;
+  counter-increment: item;
+  font-size: 12px;
+  color: #9fa1a7;
+  line-height: 1.5;
+  padding-left: 20px;
+}
+
+.otp-guide ol li::before,
+.qr-guide ol li::before {
+  content: counter(item) ". ";
+  position: absolute;
+  left: 0;
+  color: #9fa1a7;
+}
+
+.qr-guide .qr-link {
+  color: #9fa1a7;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.qr-guide .qr-link:hover {
+  color: #00b670;
+  text-decoration: underline;
+}
+
+/* QR 로그인 스타일 */
+.qr-login {
+  margin-bottom: 25px;
+}
+
+.qr-login p {
+  font-size: 12px;
+  text-align: center;
+  color: #737881;
+}
+
+.qr-login.otp-login {
+  margin-bottom: 32px;
+}
+
+.qr-login.otp-login p {
+  font-size: 13px;
+  color: #9fa1a7;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.qr-code-box {
+  text-align: center;
+  padding: 0 15px 25px 15px;
+}
+
+.qr-code-box img {
+  width: 165px;
+  height: 165px;
+  margin-bottom: 15px;
+}
+
+.qr-timer {
+  font-size: 14px;
+  color: #737881;
+  text-align: center;
+}
+
+.qr-login-btn {
+  margin-bottom: 80px;
+}
+
+/* 공홈 돌아가기 */
+.home-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.home-btn a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.home-btn a > img {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #e5e8eb;
+  background-color: #e5e8eb;
+  margin-right: 15px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.home-btn p {
+  font-size: 12px;
+  color: #737881;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* 하단 */
+.footer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-width: 328px;
+  height: 80px;
+  padding: 32px 0 0;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 12px;
+  color: #aaaaaa;
+}

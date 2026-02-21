@@ -1,0 +1,175 @@
+@charset "utf-8";
+
+/* 미디어쿼리 CSS */
+/* intro 미디어쿼리 CSS */
+
+/************************** 750px 이하 **************************/
+@media (max-width: 750px) {
+  /* 전체 body 최소 너비 제거 */
+  body {
+    min-width: 100%;
+    padding-top: 64px;
+  }
+
+  /* 스와이퍼 전체 스케일 조정 */
+  .event-banner-part .swiper-horizontal {
+    scale: 1;
+    top: 50%;
+  }
+
+  /* 모든 슬라이드 기본 설정 */
+  .event-banner-group .swiper-slide {
+    opacity: 0;
+    scale: 1;
+    translate: 0;
+    filter: none;
+    pointer-events: none;
+  }
+
+  /* 중앙(활성화된) 슬라이드만 보이기 */
+  .event-banner-group .swiper-slide.on {
+    opacity: 1;
+    scale: 1;
+    z-index: 1;
+    pointer-events: auto;
+  }
+
+  /* 앞뒤 슬라이드 완전히 숨김 */
+  .event-banner-group .swiper-slide.bfo,
+  .event-banner-group .swiper-slide.aft {
+    opacity: 0;
+    translate: 0;
+    filter: none;
+  }
+
+  /* 배너 이미지 크기 및 위치 조정 */
+  .event-banner-group .swiper-slide img:first-child {
+    position: relative;
+    left: 50%;
+    translate: -50% 0;
+    width: 90vw;
+    max-width: 90vw;
+    height: auto;
+  }
+
+  /* 강아지 캐릭터 (character1) */
+  .event-banner-group .swiper-slide .character1 {
+    width: 290%;
+    max-width: none;
+    bottom: 0;
+  }
+
+  /* 선물 (gift) */
+  .event-banner-group .swiper-slide .gift {
+    top: 28%;
+    width: 270%;
+  }
+
+  /* 캐릭터2 */
+  .event-banner-group .swiper-slide .character2 {
+    width: 140%;
+  }
+
+  /* summer 캐릭터 (character3) */
+  .event-banner-group .swiper-slide .character3 {
+    width: 270%;
+  }
+
+  /* 캐릭터4 */
+  .event-banner-group .swiper-slide .character4 {
+    width: 280%;
+  }
+
+  /* 자세히 보기 버튼 크기 조정 */
+  .swiper-slide .more1 a,
+  .swiper-slide .more2 a,
+  .swiper-slide .more3 a,
+  .swiper-slide .more4 a {
+    width: 85vw !important;
+    max-width: 85vw !important;
+    height: 80px !important;
+    bottom: 1% !important;
+  }
+
+  /* 페이지네이션 사라짐 */
+  .event-banner-group .swiper-pagination {
+    display: none;
+  }
+
+  /* 로고는 맨왼쪽으로 이동 */
+  .top-logo {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    translate: 0 -50%;
+    padding-left: 10px;
+  }
+
+  /* 상단 영역 게임시작 버튼 공간 확보 */
+  .gnb-right {
+    padding-right: 120px;
+  }
+
+  /* 회원가입 없어짐 */
+  .join {
+    display: none;
+  }
+
+  /* 로그인 오른쪽 마진 없어짐 */
+  .login {
+    margin-right: 0;
+  }
+
+  /* 로그인 크기 조절 */
+  .login a {
+    font-size: 14px;
+    padding: 6px 15px;
+  }
+
+  /* 배너 헤더 없어짐 */
+  .banner-header .left-icon {
+    display: none;
+  }
+
+  /* 배너 헤더의 게임 시작이 위로 올라감 */
+  .banner-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 64px;
+    padding: 0 10px;
+    z-index: 10000; /* top-area보다 위 */
+    display: flex;
+    align-items: center;
+  }
+
+  /* 게임시작 버튼 크기 조정 */
+  .banner-header .gamestart {
+    width: 100px;
+    height: 33px;
+    margin-left: 0;
+  }
+
+  .gamestart a:nth-child(2),
+  .gamestart a:nth-child(3) {
+    width: 100px;
+    height: 33px;
+  }
+
+  .gamestart a:first-child {
+    width: 70px;
+  }
+}
+
+/* 450 이하 */
+@media (max-width: 450px) {
+  .top-logo a {
+    display: block;
+    width: 92px;
+    height: 25px;
+  }
+
+  .top-logo a img {
+    height: 25px;
+  }
+}

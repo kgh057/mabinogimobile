@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>search 페이지</title>
+
+    <!-- 스와이퍼 CDN CSS -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+
+    <!-- 메인 CSS -->
+    <link rel="stylesheet" href="./css/search.css" />
+
+    <!-- 메인 미디어쿼리 CSS -->
+    <link rel="stylesheet" href="css/media_main.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 메인 JS -->
+    <script src="js/search.js" defer></script>
+  </head>
+  <body>
+    <!-- 1. 상단영역 -->
+    <div id="top-area inbox">
+      <header class="top-area">
+        <h2 class="temp-tit blind">1. 상단영역</h2>
+        <!-- 메뉴박스 -->
+        <section class="menu-box">
+          <!-- 로고박스 -->
+          <h1 class="logo-box">
+            <a href="index.html">
+              <img class="logo" src="./image/logo.svg" alt="로고" />
+            </a>
+          </h1>
+          <!-- 메뉴박스하위 메뉴그룹박스 -->
+          <div class="menu-group">
+            <!-- GNB메뉴 -->
+            <nav class="gnb-menu">
+              <!-- GNB메뉴 -->
+              <ul>
+                <li>
+                  <a href="">에린 소식</a>
+                  <ol class="smenu">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">업데이트</a></li>
+                    <li><a href="#">에린 노트</a></li>
+                    <li><a href="#">넥슨 통합 공지</a></li>
+                  </ol>
+                </li>
+                <li>
+                  <a href="">게임 소개</a>
+                  <ol class="smenu">
+                    <li><a href="#">에린이야기 </a></li>
+                    <li><a href="#">에린의 지역</a></li>
+                    <li><a href="#">주요 인물</a></li>
+                    <li><a href="#">클래스 소개</a></li>
+                    <li><a href="#">콘텐츠 소개</a></li>
+                    <li><a href="#">에린 가이드</a></li>
+                  </ol>
+                </li>
+                <li>
+                  <a href="">커뮤니티</a>
+                  <ol class="smenu">
+                    <li><a href="#">자유 게시판</a></li>
+                    <li><a href="#">클래스 게시판</a></li>
+                    <li><a href="#">공략 게시판</a></li>
+                    <li><a href="#">질문과 답변</a></li>
+                    <li><a href="#">친구 모집</a></li>
+                    <li><a href="#">길드 모집</a></li>
+                    <li><a href="#">2차 창작</a></li>
+                  </ol>
+                </li>
+                <li>
+                  <a href="">랭킹</a>
+                  <ol class="smenu">
+                    <li><a href="#">전투력 랭킹</a></li>
+                    <li><a href="#">매력 랭킹</a></li>
+                    <li><a href="#">생활력 랭킹</a></li>
+                  </ol>
+                </li>
+                <li>
+                  <a href="">미디어</a>
+                  <ol class="smenu">
+                    <li><a href="#">영상</a></li>
+                    <li><a href="#">이미지</a></li>
+                    <li><a href="#">음악</a></li>
+                    <li><a href="#">굿즈</a></li>
+                  </ol>
+                </li>
+                <li>
+                  <a href="">크리에이터즈</a>
+                  <ol class="smenu">
+                    <li><a href="#">캠페인 소개</a></li>
+                    <li><a href="#">크리에이터즈 공지</a></li>
+                    <li><a href="#">크리에이터즈 캠페인</a></li>
+                  </ol>
+                </li>
+                <li>
+                  <a href="">고객지원</a>
+                  <ol class="smenu">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">건의 및 제보</a></li>
+                    <li><a href="#">다운로드</a></li>
+                    <li><a href="#">쿠폰</a></li>
+                    <li><a href="#">운영정책</a></li>
+                    <li><a href="#">확률형 아이템</a></li>
+                  </ol>
+                </li>
+              </ul>
+            </nav>
+            <!-- 탑메뉴 -->
+            <nav class="top-menu">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="./image/join_icon.svg" alt="회원가입아이콘"
+                  /></a>
+                  <a href="#"
+                    ><img src="./image/join_hover.png" alt="회원가입아이콘"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./image/search_icon.svg" alt="서치아이콘"
+                  /></a>
+                  <a href="#"
+                    ><img src="./image/search_hover.png" alt="서치아이콘"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><video
+                      src="./video/gamestart_button.mp4"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                    ></video
+                  ></a>
+                  <a href="#"
+                    ><video
+                      src="./video/gamestart_button_hover.mp4"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                    ></video
+                  ></a>
+                  <a href="#"
+                    ><img src="./image/gamestart.svg" alt="게임 시작"
+                  /></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+      </header>
+    </div>
+
+    <!-- 2. 메인영역 -->
+    <div id="main-area">
+      <main class="main-area">
+        <section class="search-prat">
+          <div class="search-list">
+            <!-- 검색창 -->
+            <div class="search-input">
+              <input type="text" placeholder="검색어를 입력해 주세요" />
+              <button class="search-btn"></button>
+            </div>
+
+            <!-- 카테고리 선택 -->
+            <div class="type-list">
+              <!-- 전체 게시판 -->
+              <div class="type-all dropdown">
+                <button class="dropdown-btn">
+                  <span class="selected-text">전체 게시판</span>
+                  <span class="arrow"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#" data-category="all">전체 게시판</a></li>
+                  <li class="category-group">
+                    <h1>에린 소식</h1>
+                    <ul class="sub-category">
+                      <li><a href="#" data-category="notice">공지사항</a></li>
+                      <li><a href="#" data-category="event">이벤트</a></li>
+                      <li><a href="#" data-category="update">업데이트</a></li>
+                      <li><a href="#" data-category="note">에린 노트</a></li>
+                      <li>
+                        <a href="#" data-category="issue">확인 중인 현상</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="category-group">
+                    <h1>게임 소개</h1>
+                    <ul class="sub-category">
+                      <li><a href="#" data-category="guide">에린 가이드</a></li>
+                    </ul>
+                  </li>
+                  <li class="category-group">
+                    <h1>커뮤니티</h1>
+                    <ul class="sub-category">
+                      <li><a href="#" data-category="free">자유 게시판</a></li>
+                      <li>
+                        <a href="#" data-category="class">클래스 게시판</a>
+                      </li>
+                      <li>
+                        <a href="#" data-category="strategy">공략 게시판</a>
+                      </li>
+                      <li><a href="#" data-category="qna">질문과 답변</a></li>
+                      <li><a href="#" data-category="friend">친구 모집</a></li>
+                      <li>
+                        <a href="#" data-category="guild">길드 모집 홍보</a>
+                      </li>
+                      <li><a href="#" data-category="art">아트</a></li>
+                      <li><a href="#" data-category="writing">작문</a></li>
+                      <li>
+                        <a href="#" data-category="screenshot">스크린샷</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="category-group">
+                    <h1>미디어</h1>
+                    <ul class="sub-category">
+                      <li><a href="#" data-category="video">영상</a></li>
+                      <li><a href="#" data-category="image">이미지</a></li>
+                      <li><a href="#" data-category="music">음악</a></li>
+                      <li><a href="#" data-category="goods">굿즈</a></li>
+                    </ul>
+                  </li>
+                  <li class="category-group">
+                    <h1>크리에이터즈</h1>
+                    <ul class="sub-category">
+                      <li>
+                        <a href="#" data-category="creator"
+                          >크리에이터즈 공지</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="category-group">
+                    <h1>고객지원</h1>
+                    <ul class="sub-category">
+                      <li><a href="#" data-category="faq">FAQ</a></li>
+                      <li><a href="#" data-category="policy">운영정책</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- 제목+내용 -->
+              <div class="type-content dropdown">
+                <button class="dropdown-btn">
+                  <span class="selected-text">제목+내용</span>
+                  <span class="arrow"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#" data-value="title-content">제목+내용</a></li>
+                  <li><a href="#" data-value="title">제목</a></li>
+                  <li><a href="#" data-value="content">내용</a></li>
+                  <li><a href="#" data-value="comment">댓글 내용</a></li>
+                  <li><a href="#" data-value="tag">태그</a></li>
+                  <li><a href="#" data-value="author">글 작성자</a></li>
+                  <li><a href="#" data-value="commenter">댓글 작성자</a></li>
+                </ul>
+              </div>
+
+              <!-- 말머리 선택 -->
+              <div class="type-category dropdown">
+                <button class="dropdown-btn">
+                  <span class="selected-text">말머리 선택</span>
+                  <span class="arrow"></span>
+                </button>
+                <ul class="dropdown-menu" id="prefix-menu">
+                  <li><a href="#" data-prefix="all">말머리 선택</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="list-area">
+            <div class="list-empty"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- 3. 하단영역 -->
+    <div id="bottom-area">
+      <footer class="bottom-area inbox">
+        <h2 class="temp-tit blind">3. 하단영역</h2>
+        <div class="bottom-menu">
+          <a href="#">회사소개</a>
+          <a href="#">채용안내</a>
+          <a href="#">이용약관</a>
+          <a href="#">게임이용등급안내</a>
+          <a href="#">개인정보처리방침</a>
+          <a href="#">청소년보호정책</a>
+          <a href="#">운영정책</a>
+          <a href="#">넥슨PC방</a>
+        </div>
+        <div class="infomation">
+          <ul>
+            <li>(주)넥슨코리아 대표이사 강대현·김정욱</li>
+            <li>경기도 성남시 분당구 판교로 256번길 7</li>
+            <li>전화 : 1588-7701</li>
+            <li>팩스 : 0502-258-8322</li>
+            <li>E-mail : contact-us@nexon.co.kr</li>
+            <li>사업자등록번호 : 220-87-17483호</li>
+            <li>통신판매업 신고번호 : 제2013-경기성남-1659호</li>
+            <li><a href="#">사업자정보확인</a></li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <div class="bottom-logo">
+            <a href="#"></a>
+            <a href="#"></a>
+          </div>
+          <div class="copy">
+            ⓒ 2025 NEXON Korea Corp. & devCAT Corp. All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

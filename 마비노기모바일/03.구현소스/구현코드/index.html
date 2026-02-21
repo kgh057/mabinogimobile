@@ -1,0 +1,1093 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마비노기 모바일</title>
+
+    <!-- 스와이퍼 CDN CSS -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+
+    <!-- 메인 CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- 메인 미디어쿼리 CSS -->
+    <link rel="stylesheet" href="css/media_main.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 메인 JS -->
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- 사이드바 오버레이 -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- 사이드바 메뉴 (GNB 메뉴 JS로 복사) -->
+    <aside class="sidebar-menu">
+      <div class="sidebar-header">
+        <img class="sidebar-logo" src="./image/logo.svg" alt="로고" />
+        <button class="sidebar-close"></button>
+      </div>
+      <nav class="sidebar-nav"></nav>
+      <!-- 사이드바 하단 다운로드 & SNS -->
+      <div class="sidebar-footer">
+        <div class="sidebar-download">
+          <a href="#" class="download-btn">
+            <img src="./image/apple_down.svg" alt="애플 다운로드" />
+          </a>
+          <a href="#" class="download-btn">
+            <img src="./image/google_down.png" alt="구글 다운로드" />
+          </a>
+          <a href="#" class="download-btn">
+            <img src="./image/pc_down.svg" alt="pc 다운로드" />
+          </a>
+        </div>
+        <div class="sidebar-sns">
+          <a href="#" class="sns-btn">
+            <img src="./image/youtube_icon.svg" alt="youtube" />
+          </a>
+          <a href="#" class="sns-btn">
+            <img src="./image/kakao_icon.svg" alt="kakao" />
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 1. 상단영역 -->
+    <div id="top-area inbox">
+      <header class="top-area">
+        <h2 class="temp-tit blind">1. 상단영역</h2>
+
+        <!-- 메뉴박스 -->
+        <section class="menu-box">
+          <!-- 모바일 메뉴 -->
+          <button class="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <!-- 로고박스 -->
+          <h1 class="logo-box">
+            <a href="index.html">
+              <img class="logo" src="./image/logo.svg" alt="로고" />
+            </a>
+          </h1>
+
+          <!-- GNB메뉴 -->
+          <nav class="gnb-menu">
+            <ul>
+              <li>
+                <a href="">에린 소식</a>
+                <ol class="smenu">
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">이벤트</a></li>
+                  <li><a href="#">업데이트</a></li>
+                  <li><a href="#">에린 노트</a></li>
+                  <li><a href="#">넥슨 통합 공지</a></li>
+                </ol>
+              </li>
+              <li>
+                <a href="">게임 소개</a>
+                <ol class="smenu">
+                  <li><a href="#">에린이야기 </a></li>
+                  <li><a href="#">에린의 지역</a></li>
+                  <li><a href="#">주요 인물</a></li>
+                  <li><a href="#">클래스 소개</a></li>
+                  <li><a href="#">콘텐츠 소개</a></li>
+                  <li><a href="#">에린 가이드</a></li>
+                </ol>
+              </li>
+              <li>
+                <a href="">커뮤니티</a>
+                <ol class="smenu">
+                  <li><a href="#">자유 게시판</a></li>
+                  <li><a href="#">클래스 게시판</a></li>
+                  <li><a href="#">공략 게시판</a></li>
+                  <li><a href="#">질문과 답변</a></li>
+                  <li><a href="#">친구 모집</a></li>
+                  <li><a href="#">길드 모집</a></li>
+                  <li><a href="#">2차 창작</a></li>
+                </ol>
+              </li>
+              <li>
+                <a href="">랭킹</a>
+                <ol class="smenu">
+                  <li><a href="#">전투력 랭킹</a></li>
+                  <li><a href="#">매력 랭킹</a></li>
+                  <li><a href="#">생활력 랭킹</a></li>
+                </ol>
+              </li>
+              <li>
+                <a href="">미디어</a>
+                <ol class="smenu">
+                  <li><a href="#">영상</a></li>
+                  <li><a href="#">이미지</a></li>
+                  <li><a href="#">음악</a></li>
+                  <li><a href="#">굿즈</a></li>
+                </ol>
+              </li>
+              <li>
+                <a href="">크리에이터즈</a>
+                <ol class="smenu">
+                  <li><a href="#">캠페인 소개</a></li>
+                  <li><a href="#">크리에이터즈 공지</a></li>
+                  <li><a href="#">크리에이터즈 캠페인</a></li>
+                </ol>
+              </li>
+              <li>
+                <a href="">고객지원</a>
+                <ol class="smenu">
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">건의 및 제보</a></li>
+                  <li><a href="#">다운로드</a></li>
+                  <li><a href="#">쿠폰</a></li>
+                  <li><a href="#">운영정책</a></li>
+                  <li><a href="#">확률형 아이템</a></li>
+                </ol>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- 탑메뉴 -->
+          <nav class="top-menu">
+            <ul>
+              <li>
+                <a href="./login.html"
+                  ><img src="./image/join_icon.svg" alt="회원가입아이콘"
+                /></a>
+                <a href="./login.html"
+                  ><img src="./image/join_hover.png" alt="회원가입아이콘"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./image/search_icon.svg" alt="서치아이콘"
+                /></a>
+                <a href="#"
+                  ><img src="./image/search_hover.png" alt="서치아이콘"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><video
+                    src="./video/gamestart_button.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                  ></video
+                ></a>
+                <a href="#"
+                  ><video
+                    src="./video/gamestart_button_hover.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                  ></video
+                ></a>
+                <a href="#"
+                  ><img src="./image/gamestart.svg" alt="게임 시작"
+                /></a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </header>
+    </div>
+
+    <!-- 2. 메인영역 -->
+    <div id="main-area">
+      <main class="main-area">
+        <section class="banner-part">
+          <h2 class="temp-tit blind">2-1. 배너영역</h2>
+          <!-- 배너영역 -->
+          <!-- ******************************************* 
+              스와이퍼는 3중 박스 구조를 가진다!
+              .clip-box(부모박스 이름은 자유!)
+                ㄴ.swiper-wrapper(클래스명고정!)
+                  ㄴ.swiper-slide(클래스명고정!)
+              ******************************************* -->
+          <div class="banner-group">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="bg">
+                    <picture>
+                      <source
+                        media="(max-width: 750px)"
+                        srcset="./image/banner1_2.jpg"
+                      />
+                      <img src="./image/banner1.jpg" alt="배너1" />
+                    </picture>
+                  </div>
+                  <div class="text-area">
+                    <div class="banner-type">이벤트</div>
+                    <h3 class="title"><p>론칭 100일 기념 이벤트</p></h3>
+                    <h4 class="sub-title">
+                      <p>
+                        모험가 여러분이 만들어 주신 100일 간의 소중한 이야기들
+                        <br />그 감사한 마음을 담아 100일 기념 이벤트를 지금
+                        확인해보세요!
+                      </p>
+                    </h4>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="bg">
+                    <picture>
+                      <source
+                        media="(max-width: 750px)"
+                        srcset="./image/banner2_2.png"
+                      />
+                      <img src="./image/banner2.png" alt="배너2" />
+                    </picture>
+                  </div>
+                  <div class="text-area">
+                    <div class="banner-type">이벤트</div>
+                    <h3 class="title"><p>100일 감사 쿠폰</p></h3>
+                    <h4 class="sub-title">
+                      <p>
+                        감사의 마음을 담아 선물을 준비했어요!
+                        <br />'100일 기념 머리띠' 등 준비한 선물을 받아가세요.
+                      </p>
+                    </h4>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="bg">
+                    <picture>
+                      <source
+                        media="(max-width: 750px)"
+                        srcset="./image/banner3_2.png"
+                      />
+                      <img src="./image/banner3.png" alt="배너3" />
+                    </picture>
+                  </div>
+                  <div class="text-area">
+                    <div class="banner-type">이벤트</div>
+                    <h3 class="title"><p>여름 한 컷! 스크린샷 콘테스트!</p></h3>
+                    <h4 class="sub-title">
+                      <p>
+                        여름이 찾아온 에린에서
+                        <br />기억에 남는 순간들을 촬영해 공식 홈페이지에 등록해
+                        주세요.
+                      </p>
+                    </h4>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="bg">
+                    <picture>
+                      <source
+                        media="(max-width: 750px)"
+                        srcset="./image/banner4_2.png"
+                      />
+                      <img src="./image/banner4.png" alt="배너4" />
+                    </picture>
+                  </div>
+                  <div class="text-area">
+                    <div class="banner-type">이벤트</div>
+                    <h3 class="title"><p>'이달의 우수 게임' 선정</p></h3>
+                    <h4 class="sub-title">
+                      <p>
+                        많은 관심과 사랑을 보내주신 모험가님들께 선물을
+                        준비했어요!
+                      </p>
+                    </h4>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="bg">
+                    <picture>
+                      <source
+                        media="(max-width: 750px)"
+                        srcset="./image/banner5_2.png"
+                      />
+                      <img src="./image/banner5.png" alt="배너5" />
+                    </picture>
+                  </div>
+                  <div class="text-area">
+                    <div class="banner-type">이벤트</div>
+                    <h3 class="title"><p>한여름의 모험 계획표!</p></h3>
+                    <h4 class="sub-title">
+                      <p>
+                        모험 계획표를 따라 다양한 미션에 도전하고
+                        <br />풍성한 선물을 받아가세요!
+                      </p>
+                    </h4>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="bg">
+                    <picture>
+                      <source
+                        media="(max-width: 750px)"
+                        srcset="./image/banner6_2.png"
+                      />
+                      <img src="./image/banner6.png" alt="배너6" />
+                    </picture>
+                  </div>
+                  <div class="text-area">
+                    <div class="banner-type">이벤트</div>
+                    <h3 class="title"><p>한여름의 깜짝 응원 선물!</p></h3>
+                    <h4 class="sub-title">
+                      <p>여름날 힘을 복돋아주는 선물을 받아 보세요!</p>
+                    </h4>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+
+        <!-- SNS/다운로드링크영역 -->
+        <div id="link-part">
+          <section class="link-part inbox">
+            <h2 class="temp-tit blind">2-2. SNS다운로드영역</h2>
+            <div class="link-group">
+              <!-- SNS 박스 -->
+              <div class="sns-box">
+                <!-- 아이콘, 뒷영상 -->
+                <div class="sns-list">
+                  <!-- SNS 아이콘 그룹 -->
+                  <div class="snsbg">
+                    <img src="./image/snsbg.png" alt="" />
+                  </div>
+                  <div class="sns-icon">
+                    <a href="#">
+                      <img src="./image/youtube_icon.svg" alt="유튜브 아이콘" />
+                      <img
+                        src="./image/youtube_hover.png"
+                        alt="유튜브 아이콘"
+                      />
+                    </a>
+                    <a href="#">
+                      <img
+                        src="./image/kakao_icon.svg"
+                        alt="카카오채널 아이콘"
+                      />
+                      <img
+                        src="./image/kakao_hover.png"
+                        alt="카카오채널 아이콘"
+                      />
+                    </a>
+                  </div>
+                  <!-- 뒷배경 영상 -->
+                  <video
+                    src="./video/main_loop_1.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                  ></video>
+                </div>
+              </div>
+
+              <!-- 다운로드 박스 -->
+              <div class="download-box">
+                <!-- 아이콘, 뒷영상 -->
+                <div class="download-list">
+                  <!-- 다운로드 아이콘 그룹 -->
+                  <div class="download-icon">
+                    <a href="#"
+                      ><img src="./image/apple_down.svg" alt="애플 다운로드"
+                    /></a>
+                    <a href="#"
+                      ><img src="./image/google.svg" alt="구글 다운로드"
+                    /></a>
+                    <a href="#"
+                      ><img src="./image/pc_down.svg" alt="pc 다운로드"
+                    /></a>
+                  </div>
+                  <!-- 뒷배경 영상 -->
+                  <video
+                    src="./video/main_loop_2.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                  ></video>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- 2-3. 에린소식영역 -->
+        <div id="news-part">
+          <section class="news-part inbox">
+            <div class="news-group">
+              <div class="news-title-group">
+                <h2 class="news-top">에린 소식</h2>
+                <a href="#"
+                  ><img src="./image/plus.svg" alt="더보기 아이콘"
+                /></a>
+              </div>
+              <!-- 에린소식 하위메뉴 -->
+              <div class="news-type">
+                <button class="on" data-type="notice">
+                  <span>공지사항</span>
+                </button>
+                <button data-type="event"><span>이벤트</span></button>
+                <button data-type="note"><span>에린 노트</span></button>
+              </div>
+            </div>
+            <!-- 에린소식 하위메뉴 내용 -->
+            <div class="news-list-box">
+              <!-- 공지사항 -->
+              <ul class="news-list show" data-type="notice">
+                <!-- 첫번째 박스 -->
+                <li>
+                  <div class="thumnail">
+                    <img src="./image/sticky_2.png" alt="소식 썸네일" />
+                  </div>
+                  <div class="news-content">
+                    <div class="type">
+                      <span>공지사항 > 점검</span>
+                    </div>
+                    <a href="#"
+                      ><span>(완료) 정기점검 안내 (06:00 ~ 09:30)</span></a
+                    >
+                    <div class="date"><span>2025.08.07</span></div>
+                  </div>
+                </li>
+                <!-- 두번째 박스 -->
+                <li>
+                  <div class="thumnail">
+                    <img src="./image/sticky_2.png" alt="소식 썸네일" />
+                  </div>
+                  <div class="news-content">
+                    <div class="type">
+                      <span>공지사항 > 확인중인현상</span>
+                    </div>
+                    <a href="#"><span>8월 확인 중인 현상 안내</span></a>
+                    <div class="date">
+                      <span>2025.08.01</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- 이벤트 -->
+              <ul class="news-list" data-type="event">
+                <!-- 첫번째 박스 -->
+                <li>
+                  <div class="thumnail">
+                    <img
+                      src="./image/news_thumnail4(1).png"
+                      alt="이벤트 썸네일"
+                    />
+                  </div>
+                  <div class="news-content">
+                    <div class="type">이벤트 > 진행중</div>
+                    <a href="#"
+                      ><span
+                        >한여름의 깜짝 응원 선물! 온타임 이벤트 안내</span
+                      ></a
+                    >
+                    <div class="date">
+                      <span
+                        >2025.08.15(금) 오전 0시 ~ 2025.08.17(일) 오후 11시
+                        59분까지</span
+                      >
+                    </div>
+                  </div>
+                </li>
+                <!-- 두번째 박스 -->
+                <li>
+                  <div class="thumnail">
+                    <img
+                      src="./image/news_thumnail3(1).png"
+                      alt="이벤트 썸네일"
+                    />
+                  </div>
+                  <div class="news-content">
+                    <div class="type">이벤트 > 진행중</div>
+                    <a href="#"
+                      ><span>한여름의 모험 계획표! 이벤트 안내</span></a
+                    >
+                    <div class="date">
+                      <span
+                        >2025.08.07(목) 점검 후 ~ 2025.08.21(목) 오전 5시
+                        59분까지</span
+                      >
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- 에린 노트 -->
+              <ul class="news-list" data-type="note">
+                <!-- 첫번째 박스 -->
+                <li>
+                  <div class="thumnail">
+                    <img src="./image/sticky_2.png" alt="에린노트 썸네일" />
+                  </div>
+                  <div class="news-content">
+                    <div class="type">에린 노트 > CM노트</div>
+                    <a href="#"
+                      ><span
+                        >신규 모험가님을 위한 필수 에린 가이드 모음집</span
+                      ></a
+                    >
+                    <div class="date"><span>2025.09.25</span></div>
+                  </div>
+                </li>
+                <!-- 두번째 박스 -->
+                <li>
+                  <div class="thumnail">
+                    <img src="./image/sticky_2.png" alt="에린노트 썸네일" />
+                  </div>
+                  <div class="news-content">
+                    <div class="type">에린 노트 > 개발자 노트</div>
+                    <a href="#"
+                      ><span
+                        >쇼케이스 이후, 시즌1 룬 강화 방향성에 대한 변경 사항을
+                        이야기 드립니다.</span
+                      ></a
+                    >
+                    <div class="date"><span>2025.09.24</span></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <!-- 2-4. 커뮤니티영역 -->
+        <div id="community-part">
+          <section class="community-part inbox">
+            <ul>
+              <!-- 커뮤니티 박스 -->
+              <li>
+                <div class="community-group">
+                  <div class="community-title-group">
+                    <h2 class="community-top">커뮤니티</h2>
+                    <a href="#"
+                      ><img src="./image/plus.svg" alt="더보기 아이콘"
+                    /></a>
+                  </div>
+                  <div class="community-type">
+                    <button class="on" data-type="guild">
+                      <span>길드 모집</span>
+                    </button>
+                    <button data-type="strategy">
+                      <span>공략 게시판</span>
+                    </button>
+                    <button data-type="classboard">
+                      <span>클래스 게시판</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- 길드 모집 -->
+                <div class="community-list" data-type="guild">
+                  <ul>
+                    <li>
+                      <div class="type">
+                        <span>길드 모집 홍보</span>
+                      </div>
+                      <a href="#"
+                        ><span
+                          >[알리사] Lv.5 친목길드 "별의노래" 에서
+                          길드원을모집합니다. (29/32)</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <div class="type">
+                        <span>길드 모집 홍보</span>
+                      </div>
+                      <a href="#"
+                        ><span
+                          >[칼릭스] Lv.5 🌱유기농🌱 동료 찾아요! [29/32]</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <div class="type">
+                        <span>길드 모집 홍보</span>
+                      </div>
+                      <a href="#"
+                        ><span
+                          >[아이라] 🏖️별바다🏖️에서 함께하실 신규 길드원을
+                          모집합니다!</span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- 공략 -->
+                <div class="community-list" data-type="strategy">
+                  <ul>
+                    <li>
+                      <div class="type"><span>공략 > 클래스</span></div>
+                      <a href="#"><span>[격투가] 스킬 콤보 공략</span></a>
+                    </li>
+
+                    <li>
+                      <div class="type"><span>공략 > 기타</span></div>
+                      <a href="#"><span>[악보 요청]</span></a>
+                    </li>
+
+                    <li>
+                      <div class="type"><span>공략 > 던전</span></div>
+                      <a href="#"
+                        ><span>글라스기브넨 매우 어려움 공략 </span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- 클래스게시판 -->
+                <div class="community-list" data-type="classboard">
+                  <ul>
+                    <li>
+                      <div class="type"><span>클래스 > 전사</span></div>
+                      <a href="#"
+                        ><span
+                          >전사를 상향해달랬더니 어비스를 너프시키네</span
+                        ></a
+                      >
+                    </li>
+
+                    <li>
+                      <div class="type"><span>클래스 > 마법사</span></div>
+                      <a href="#"><span>마법사 진로 상담</span></a>
+                    </li>
+
+                    <li>
+                      <div class="type"><span>클래스 > 힐러</span></div>
+                      <a href="#"
+                        ><span
+                          >사제 영원 + 옛마법사룬 사용 후기(악세 성수빛)</span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <!-- 클래스 박스 -->
+              <li>
+                <div class="class-title-group">
+                  <h2 class="class-top">클래스</h2>
+                  <a href="#">
+                    <img src="./image/plus.svg" alt="더보기 아이콘" />
+                  </a>
+                </div>
+                <div class="class-list">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div class="class-icon">
+                          <img src="./image/warrior_icon.png" alt="전사" />
+                        </div>
+                        <span>전사</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#">
+                        <div class="class-icon">
+                          <img src="./image/archer_icon.png" alt="궁수" />
+                        </div>
+                        <span>궁수</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#">
+                        <div class="class-icon">
+                          <img src="./image/mage_icon.png" alt="마법사" />
+                        </div>
+                        <span>마법사</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#">
+                        <div class="class-icon">
+                          <img src="./image/healer_icon.png" alt="힐러" />
+                        </div>
+                        <span>힐러</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#">
+                        <div class="class-icon">
+                          <img src="./image/bard_icon.png" alt="음유시인" />
+                        </div>
+                        <span>음유시인</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#">
+                        <div class="class-icon">
+                          <img src="./image/thief_icon.png" alt="도적" />
+                        </div>
+                        <span>도적</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- 2-5. 공식영상영역 -->
+        <section class="video-part inbox">
+          <div class="video-title-group">
+            <h2 class="video-top">공식 영상</h2>
+            <a href="#"><img src="./image/plus.svg" alt="더보기 아이콘" /></a>
+            <!-- 버튼 -->
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- ******************************************* 
+            스와이퍼는 3중 박스 구조를 가진다!
+            .clip-box(부모박스 이름은 자유!)
+              ㄴ.swiper-wrapper(클래스명고정!)
+                ㄴ.swiper-slide(클래스명고정!)
+            ******************************************* -->
+          <!-- 공식영상 -->
+          <!-- 스와이퍼 적용 부모박스 : .video-group -->
+          <div class="video-group">
+            <!-- 스와이퍼 랩퍼박스 : .swiper-wrapper -->
+            <ul class="swiper-wrapper">
+              <!-- 스와이퍼 리스트 : .swiper-slide -->
+              <li class="swiper-slide" data-video-id="taMMU3ibCxM">
+                <div class="thumbnail">
+                  <img src="./image/video1.png" alt="공식영상1" />
+                </div>
+                <div class="text">
+                  <span>신규 레이드 '화이트 서큐버스'</span>
+                </div>
+              </li>
+
+              <li class="video swiper-slide" data-video-id="tD8JaVOzpOE">
+                <div class="thumbnail">
+                  <img src="./image/video2.png" alt="공식영상2" />
+                </div>
+                <div class="text">
+                  <span>신규 클래스 '전격술사'</span>
+                </div>
+              </li>
+
+              <li class="video swiper-slide" data-video-id="sq2kejLv__k">
+                <div class="thumbnail">
+                  <img src="./image/video3.png" alt="공식영상3" />
+                </div>
+                <div class="text">
+                  <span>신규 레이드 '글라스기브넨'</span>
+                </div>
+              </li>
+
+              <li class="video swiper-slide" data-video-id="hcyHctotTY4">
+                <div class="thumbnail">
+                  <img src="./image/video4.png" alt="공식영상4" />
+                </div>
+                <div class="text">
+                  <span>신규 클래스 계열 '도적'</span>
+                </div>
+              </li>
+
+              <li class="video swiper-slide" data-video-id="UZjjHGlwx_s">
+                <div class="thumbnail">
+                  <img src="./image/video5.png" alt="공식영상5" />
+                </div>
+                <div class="text">
+                  <span>어릴 적 할머니가 들려주신 옛 전설 OST/MV</span>
+                </div>
+              </li>
+
+              <li class="video swiper-slide" data-video-id="-OCgnVbKhVE">
+                <div class="thumbnail">
+                  <img src="./image/video6.png" alt="공식영상6" />
+                </div>
+                <div class="text">
+                  <span>Chapter.1: 여신 모리안</span>
+                </div>
+              </li>
+
+              <li class="video swiper-slide" data-video-id="jAV7VMp0mWc">
+                <div class="thumbnail">
+                  <img src="./image/video7.png" alt="공식영상7" />
+                </div>
+                <div class="text">
+                  <span>우리가 함께 할 낭만과 모험의 세상 | Full ver.</span>
+                </div>
+              </li>
+
+              <li class="video swiper-slide" data-video-id="X-OAO9TSnP0">
+                <div class="thumbnail">
+                  <img src="./image/video8.png" alt="공식영상8" />
+                </div>
+                <div class="text">
+                  <span>세계관 영상</span>
+                </div>
+              </li>
+
+              <li class="video swiper-slide" data-video-id="XOybsouxf30">
+                <div class="thumbnail">
+                  <img src="./image/video9.png" alt="공식영상9" />
+                </div>
+                <div class="text">
+                  <span>지역 소개 | 티르코네일</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- YouTube 모달 -->
+        <div class="video-modal" id="videoModal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-logo"></div>
+              <button class="modal-close"></button>
+            </div>
+            <!-- 영상 -->
+            <div class="modal-body">
+              <div class="video-wrapper">
+                <iframe
+                  id="youtubePlayer"
+                  src=""
+                  frameborder="0"
+                  allow="accelerometer; autoplay"
+                  frameborder="0"
+                ></iframe>
+              </div>
+              <div class="video-title">신규 레이드 '화이트 서큐버스'</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2-6. 가이드영역 -->
+        <section class="guide-part inbox">
+          <div class="guide-title-group">
+            <h2 class="guide-top">가이드</h2>
+            <a href="#"><img src="./image/plus.svg" alt="더보기 아이콘" /></a>
+            <!-- 버튼 -->
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- ******************************************* 
+            스와이퍼는 3중 박스 구조를 가진다!
+            .clip-box(부모박스 이름은 자유!)
+              ㄴ.swiper-wrapper(클래스명고정!)
+                ㄴ.swiper-slide(클래스명고정!)
+            ******************************************* -->
+          <!-- 가이드 -->
+          <!-- 스와이퍼 적용 부모박스 : .guide-group -->
+          <div class="guide-group">
+            <!-- 스와이퍼 랩퍼박스 : .swiper-wrapper -->
+            <ul class="swiper-wrapper">
+              <!-- 스와이퍼 리스트 : .swiper-slide -->
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="guide-view">
+                    <img src="./image/guide4.jpg" alt="미스틱 던전" />
+                  </div>
+                  <span>미스틱 던전</span>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="guide-view">
+                    <img src="./image/guide10.png" alt="망령의 탑" />
+                  </div>
+                  <span>망령의 탑</span>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="guide-view">
+                    <img src="./image/guide1.jpg" alt="인챈트" />
+                  </div>
+                  <span>인챈트</span>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="guide-view">
+                    <img src="./image/guide2.png" alt="레이드" />
+                  </div>
+                  <span>레이드</span>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="guide-view">
+                    <img src="./image/guide3.jpg" alt="연금술" />
+                  </div>
+                  <span>연금술</span>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="guide-view">
+                    <img src="./image/guide1.jpg" alt="룬 가이드" />
+                  </div>
+                  <span>룬 가이드</span>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="guide-view">
+                    <img src="./image/guide1.jpg" alt="보석" />
+                  </div>
+                  <span>보석</span>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="guide-view">
+                    <img src="./image/guide4.jpg" alt="던전 / 심층던전" />
+                  </div>
+                  <span>던전 / 심층던전</span>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="guide-view">
+                    <img src="./image/guide4.jpg" alt="사냥터 콘텐츠" />
+                  </div>
+                  <span>사냥터 콘텐츠</span>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="guide-view">
+                    <img src="./image/guide5.jpg" alt="파티" />
+                  </div>
+                  <span>파티</span>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="guide-view">
+                    <img src="./image/guide6.jpg" alt="검은 덩어리" />
+                  </div>
+                  <span>검은 덩어리</span>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="guide-view">
+                    <img src="./image/guide7.jpg" alt="클래스 교체" />
+                  </div>
+                  <span>클래스 교체</span>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="guide-view">
+                    <img src="./image/guide8.jpg" alt="캠프파이어" />
+                  </div>
+                  <span>캠프파이어</span>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="guide-view">
+                    <img src="./image/guide9.jpg" alt="아르바이트" />
+                  </div>
+                  <span>아르바이트</span>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#">
+                  <div class="guide-view">
+                    <img src="./image/guide5.jpg" alt="우연한 만남" />
+                  </div>
+                  <span>우연한 만남</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- 3. 하단영역 -->
+    <div id="bottom-area">
+      <footer class="bottom-area inbox">
+        <h2 class="temp-tit blind">3. 하단영역</h2>
+        <div class="bottom-menu">
+          <a href="#">회사소개</a>
+          <a href="#">채용안내</a>
+          <a href="#">이용약관</a>
+          <a href="#">게임이용등급안내</a>
+          <a href="#">개인정보처리방침</a>
+          <a href="#">청소년보호정책</a>
+          <a href="#">운영정책</a>
+          <a href="#">넥슨PC방</a>
+        </div>
+        <div class="infomation">
+          <ul>
+            <li>(주)넥슨코리아 대표이사 강대현·김정욱</li>
+            <li>경기도 성남시 분당구 판교로 256번길 7</li>
+            <li>전화 : 1588-7701</li>
+            <li>팩스 : 0502-258-8322</li>
+            <li>E-mail : contact-us@nexon.co.kr</li>
+            <li>사업자등록번호 : 220-87-17483호</li>
+            <li>통신판매업 신고번호 : 제2013-경기성남-1659호</li>
+            <li><a href="#">사업자정보확인</a></li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <div class="bottom-logo">
+            <a href="#"></a>
+            <a href="#"></a>
+          </div>
+          <div class="copy">
+            ⓒ 2025 NEXON Korea Corp. & devCAT Corp. All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- 사이드 버튼 -->
+    <div class="scroll-btn">
+      <!-- 위로 -->
+      <button class="scroll-top-btn" id="scrollTopBtn"></button>
+      <!-- 아래로 -->
+      <button class="scroll-bottom-btn" id="scrollBottomBtn"></button>
+    </div>
+
+    <!-- 사이드 광고 배너 -->
+    <div class="float-banner">
+      <a href="#"
+        ><img src="./image/float_banner.png" alt="사이드 광고 배너"
+      /></a>
+      <button onclick="closeBannerToday()">오늘 그만 보기</button>
+    </div>
+  </body>
+</html>

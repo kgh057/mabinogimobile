@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마비노기 모바일 인트로</title>
+
+    <!-- 스와이퍼 CDN CSS -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+
+    <!-- 인트로 CSS -->
+    <link rel="stylesheet" href="./css/intro.css" />
+
+    <!-- 메인 미디어쿼리 CSS -->
+    <link rel="stylesheet" href="css/media_intro.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 메인 JS -->
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- 1. 상단영역 -->
+    <div id="top-area inbox">
+      <header class="top-area">
+        <h2 class="temp-tit blind">1. 상단영역</h2>
+        <section class="top-box">
+          <!-- 로고 -->
+          <div class="top-logo">
+            <a href="index.html"><img src="./image/logo.svg" alt="로고" /></a>
+          </div>
+          <!-- 오른쪽 회원가입/로그인 -->
+          <div class="gnb-right">
+            <div class="join"><a href="#">회원가입</a></div>
+            <div class="login"><a href="login.html">로그인</a></div>
+          </div>
+        </section>
+      </header>
+    </div>
+
+    <!-- 2. 메인영역 -->
+    <div id="main-area">
+      <main class="main-area">
+        <section class="event-banner-part">
+          <h2 class="temp-tit blind">배너영역</h2>
+          <!-- 배너영역 맨위 -->
+          <div class="banner-header">
+            <!-- 아이콘 그룹 -->
+            <div class="left-icon">
+              <div class="home">
+                <a href="index.html"
+                  ><img src="./image/home.webp" alt="공식사이트"
+                /></a>
+              </div>
+              <div class="youtube">
+                <a href="#"><img src="./image/youtube.webp" alt="유튜브" /></a>
+              </div>
+              <div class="kakao">
+                <a href="#"
+                  ><img src="./image/kakao.webp" alt="카카오채널"
+                /></a>
+              </div>
+            </div>
+            <!-- 게임시작 -->
+            <div class="gamestart">
+              <a href="#"><img src="./image/gamestart.svg" alt="게임시작" /></a>
+              <a href="#"
+                ><video
+                  src="./video/gamestart_button.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                ></video
+              ></a>
+              <a href="#"
+                ><video
+                  src="./video/gamestart_button_hover.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                ></video
+              ></a>
+            </div>
+          </div>
+          <!-- 드래그 안내 -->
+          <div class="drag-show">
+            <div class="arrow1">
+              <div class="arrow">
+                <img src="./image/drag_arrow.png" alt="" />
+              </div>
+              <div class="arrow">
+                <img src="./image/drag_arrow.png" alt="" />
+              </div>
+              <div class="arrow">
+                <img src="./image/drag_arrow.png" alt="" />
+              </div>
+            </div>
+            <span class="mouse_drag"></span>
+            <div class="arrow2">
+              <div class="arrow">
+                <img src="./image/drag_arrow2.png" alt="" />
+              </div>
+              <div class="arrow">
+                <img src="./image/drag_arrow2.png" alt="" />
+              </div>
+              <div class="arrow">
+                <img src="./image/drag_arrow2.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- 배너영역 -->
+          <!-- ******************************************* 
+              스와이퍼는 3중 박스 구조를 가진다!
+              .clip-box(부모박스 이름은 자유!)
+                ㄴ.swiper-wrapper(클래스명고정!)
+                  ㄴ.swiper-slide(클래스명고정!)
+              ******************************************* -->
+          <div class="event-banner-group">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide bfo">
+                <div class="more1"><a href="#">자세히 보기</a></div>
+                <a href="#">
+                  <img src="./image/event4(1).png" alt="이벤트4" />
+                  <img src="./image/character2.png" class="character4" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide on">
+                <div class="more2"><a href="#">자세히 보기</a></div>
+                <a href="#">
+                  <img src="./image/event1(1).png" alt="이벤트1" />
+                  <img src="./image/puppyball.png" class="character1" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide aft">
+                <div class="more3"><a href="#">자세히 보기</a></div>
+                <a href="#">
+                  <img src="./image/event2(1).png" alt="이벤트2" />
+                  <img src="./image/gift.png" class="gift" alt="" />
+                  <img src="./image/character1.png" class="character2" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <div class="more4"><a href="#">자세히 보기</a></div>
+                <a href="#">
+                  <img src="./image/event3(1).png" alt="이벤트3" />
+                  <img src="./image/summer.png" class="character3" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

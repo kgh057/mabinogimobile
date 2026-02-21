@@ -1,0 +1,648 @@
+@charset "UTF-8";
+
+/* 외부 CSS 불러오기 */
+@import url(./reset.css);
+@import url(./core.css);
+/* 16그리드 CSS */
+@import url(./grid_16_flex.css);
+
+/* 공사중 표시 */
+/* body * {
+  outline: 2px dashed blue;
+} */
+
+body {
+  /* 상단영역 고정 position:fixed로 다른 콘텐츠가 상단에 가려지지 않게 */
+  padding-top: 64px;
+  overflow: hidden;
+  /* 가로 고정 */
+  min-width: 1740px;
+}
+
+/* 인트로 CSS */
+/******************** 1. 상단영역 ********************/
+/* 상단영역 최상위 부모박스 */
+#top-area {
+  position: relative;
+  /* 상단영역이 항상 위 */
+  z-index: 9999;
+  height: 64px;
+}
+
+.top-area {
+  /* 상단영역 고정 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  height: 64px;
+  z-index: 9999;
+}
+
+/* 로고 - 상단 영역 가운데 위치 */
+.top-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.top-logo a {
+  display: block;
+  width: 132px;
+  height: 36px;
+}
+
+/* 오른쪽 회원가입/로그인 영역 */
+.gnb-right {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  right: 0;
+  height: 64px;
+  padding-right: 10px;
+}
+
+/* 회원가입 */
+.join {
+  margin-right: 15px;
+}
+
+.join a {
+  font-size: 16px;
+  color: #525252;
+}
+
+/* 로그인 */
+.login {
+  margin-right: 10px;
+}
+
+.login a {
+  min-width: 85px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #525252;
+  text-align: center;
+  border: 2px solid #525252;
+  border-radius: 20px;
+  padding: 6px 18px;
+}
+
+/******************** 2. 메인영역 ********************/
+.event-banner-part {
+  position: relative; /* 부모자격 - pagination의 부모 */
+  height: calc(100vh - 64px);
+
+  /* 배경 이미지 */
+  background: url(../image/event1bg.png) no-repeat center / cover;
+}
+
+.event-banner-part::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* 배너영역 맨위 */
+.banner-header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  right: 0;
+  padding: 20px 20px;
+  z-index: 1;
+}
+
+/* 배너영역 아이콘 그룹 */
+.left-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.left-icon a {
+  display: block;
+  width: 48px;
+  height: 48px;
+  filter: brightness(0.7);
+}
+
+/* 배너영역 아이콘 마우스 오버시 */
+.left-icon a:hover {
+  filter: brightness(1);
+}
+
+.left-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 게임시작 */
+.gamestart {
+  position: relative;
+  width: 148px;
+  height: 48px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.gamestart a:nth-child(2),
+.gamestart a:nth-child(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 148px;
+  height: 48px;
+}
+
+/* 게임시작 글자이미지 */
+.gamestart a:first-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100px;
+  z-index: 1;
+}
+
+.gamestart a:first-child img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 게임시작 영상 */
+.gamestart video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 1.3;
+}
+
+/* 게임시작 색 변경 영상 숨김 */
+.gamestart a:nth-child(3) {
+  display: none;
+}
+
+/* 게임시작 마우스 오버시 색 변경 영상 등장 */
+.gamestart:hover a:nth-child(3) {
+  display: block;
+}
+
+/* 게임시작 마우스 오버시 기존 영상 숨김 */
+.gamestart:hover a:nth-child(2) {
+  display: none;
+}
+
+/* 드래그 안내 */
+.drag-show {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  translate: -50% -50%;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  z-index: 999;
+  -webkit-user-drag: none;
+  animation: drag-ani 4s ease-in-out forwards;
+}
+
+@keyframes drag-ani {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.drag-show .arrow1 {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  margin-right: 5px;
+}
+
+.drag-show .arrow1 .arrow:last-child {
+  animation: arrow-1-ani 1.1s ease-in-out infinite;
+}
+
+@keyframes arrow-1-ani {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.5;
+  }
+}
+
+.drag-show .arrow1 .arrow:nth-child(2) {
+  animation: arrow-2-ani 1.1s ease-in-out infinite;
+  animation-delay: 0.15s;
+}
+
+@keyframes arrow-2-ani {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.5;
+  }
+}
+
+.drag-show .arrow1 .arrow:first-child {
+  animation: arrow-3-ani 1.1s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes arrow-3-ani {
+  100% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.5;
+  }
+}
+
+.drag-show .mouse_drag {
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 26px;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+}
+
+.drag-show .mouse_drag::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  translate: -50% 0;
+  width: 2px;
+  height: 3px;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+/* 마우스 휠 움직이게 */
+.drag-show .mouse_drag::after {
+  animation: wheel-move-ani 1.5s ease-in-out infinite;
+}
+
+@keyframes wheel-move-ani {
+  0%,
+  100% {
+    opacity: 1;
+    transform: translate(-50%) translateY(0);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translate(-50%) translateY(2px);
+  }
+}
+
+.drag-show .arrow2 {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  margin-left: 5px;
+}
+
+.drag-show .arrow2 .arrow:first-child {
+  animation: arrow-4-ani 1.1s ease-in-out infinite;
+}
+
+@keyframes arrow-4-ani {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.5;
+  }
+}
+
+.drag-show .arrow2 .arrow:nth-child(2) {
+  animation: arrow-5-ani 1.1s ease-in-out infinite;
+  animation-delay: 0.15s;
+}
+
+@keyframes arrow-5-ani {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.5;
+  }
+}
+
+.drag-show .arrow2 .arrow:last-child {
+  animation: arrow-6-ani 1.1s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes arrow-6-ani {
+  100% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.5;
+  }
+}
+
+/* 배너 슬라이드 */
+.event-banner-part .swiper-horizontal {
+  position: relative;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 99;
+  scale: 1.2;
+}
+
+/* 자세히 보기 */
+.swiper-slide .more1 a:first-child {
+  display: block;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 394px;
+  height: 68px;
+  bottom: 1%;
+  left: 50%;
+  translate: -50% 0;
+  font-size: 40px;
+  color: #fff;
+  font-weight: bold;
+  background: #53907D;
+  border-radius: 20px;
+  z-index: 15;
+}
+.swiper-slide .more2 a:first-child {
+  display: block;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 394px;
+  height: 68px;
+  bottom: 1%;
+  left: 50%;
+  translate: -50% 0;
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: bold;
+  background: #91CAFF;
+  border-radius: 20px;
+  z-index: 15;
+}
+.swiper-slide .more3 a:first-child {
+  display: block;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 394px;
+  height: 68px;
+  bottom: 1%;
+  left: 50%;
+  translate: -50% 0;
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: bold;
+  background: #7EACEF;
+  border-radius: 20px;
+  z-index: 15;
+}
+.swiper-slide .more4 a:first-child {
+  display: block;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 394px;
+  height: 68px;
+  bottom: 1%;
+  left: 50%;
+  translate: -50% 0;
+  font-size: 40px;
+  color: #fff;
+  font-weight: bold;
+  background: #514D5C;
+  border-radius: 20px;
+  z-index: 15;
+}
+
+.swiper-slide a:last-child {
+  cursor: grab;
+}
+.swiper-slide a:last-child:active {
+  cursor: grabbing;
+}
+
+/* 다른 모든 슬라이드는 축소 */
+.event-banner-group .swiper-slide {
+  position: relative;
+  scale: 0.9;
+  transition: scale 0.2s ease-in-out;
+  text-align: center;
+  user-select: none;
+}
+
+/* 등장 캐릭터 - 이벤트1 (강아지) */
+.event-banner-group .swiper-slide .character1 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+  transform-origin: bottom;
+  scale: 0.8;
+}
+
+.event-banner-group .swiper-slide.on .character1 {
+  animation: character1-updown-ani 1s ease-in-out 2s infinite alternate,
+    character1-show-ani 2s ease-in-out forwards;
+}
+
+@keyframes character1-updown-ani {
+  to {
+    scale: 1;
+    transform: translateY(-15px);
+  }
+}
+@keyframes character1-show-ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* 등장 캐릭터 - 이벤트 2 (캐릭터+선물) */
+.event-banner-group .swiper-slide .gift {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  translate: -50% 0;
+  transform-origin: top;
+  scale: 0.8;
+}
+
+.event-banner-group .swiper-slide.on .gift {
+  animation: gift-ani 2s ease-in-out infinite;
+}
+
+@keyframes gift-ani {
+  0%,
+  100% {
+    scale: 1.1;
+    transform: translateY(0);
+  }
+  50% {
+    scale: 1;
+    transform: translateY(0);
+  }
+}
+
+.event-banner-group .swiper-slide .character2 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+  transform-origin: bottom;
+}
+
+/* 등장 캐릭터 - 이벤트 3 (summer) */
+.event-banner-group .swiper-slide .character3 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+  transform-origin: bottom;
+  scale: 0.9;
+}
+
+.event-banner-group .swiper-slide.on .character3 {
+  scale: 1.09;
+  animation: character3-ani 2s ease-in-out;
+}
+
+/* 등장 캐릭터 - 이벤트 4 (캐릭터) */
+.event-banner-group .swiper-slide .character4 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+  transform-origin: bottom;
+  scale: 0.8;
+}
+
+.event-banner-group .swiper-slide.on .character4 {
+  scale: 1.1;
+  animation: character4-ani 2s ease-in-out;
+}
+
+@keyframes character4-ani {
+  0% {
+    translate: 50% 0;
+    scale: 1.1;
+    opacity: 0;
+  }
+  50% {
+    translate: -50% 0;
+    scale: 1.1;
+  }
+  100% {
+    translate: -50% 0;
+  }
+}
+
+/* 중앙 슬라이드 on넣으면 크기 원래대로 설정 */
+.event-banner-group .swiper-slide.on {
+  scale: 1;
+  z-index: 1;
+}
+
+/* 앞쪽 슬라이드는 오른쪽 중앙으로 조금 이동 */
+.event-banner-group .swiper-slide.bfo {
+  translate: 45%;
+  filter: brightness(0.5);
+}
+
+/* 뒷쪽 슬라이드는 왼쪽 중앙으로 조금 이동 */
+.event-banner-group .swiper-slide.aft {
+  translate: -45%;
+  filter: brightness(0.5);
+}
+
+.event-banner-group .swiper-slide img:first-child {
+  border-radius: 20px;
+}
+
+/* 버튼 설정 */
+.event-banner-group .swiper-pagination {
+  position: fixed !important;
+  left: 50%;
+  bottom: calc((100vh - 64px - 870px) / 2 * -1);
+  translate: -50% 0;
+  height: calc((100vh - 64px - 870px) / 2) !important;
+  width: auto !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  /* outline: 1px solid lime; */
+}
+
+.event-banner-group .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  /* background: #aaaaaa; */
+  cursor: pointer;
+}
+
+/* 선택된 버튼 */
+.event-banner-group .swiper-pagination-bullet-active {
+  width: 30px;
+  height: 9px;
+  background: #2baf7e;
+  border-radius: 5px;
+}

@@ -1,0 +1,837 @@
+@charset "utf-8";
+
+/* 미디어쿼리 CSS */
+/* main 미디어쿼리 CSS */
+
+/************************** 1500 이하 미디어쿼리 **************************/
+@media screen and (max-width: 1500px) {
+  /* SNS, 다운로드 */
+  .link-group {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* 로고 */
+  .logo-box {
+    width: 110px;
+  }
+
+  .logo-box img {
+    width: 110px;
+    height: 30px;
+  }
+
+  /* GNB 메뉴 */
+  .gnb-menu > ul {
+    gap: 5rem;
+  }
+
+  .gnb-menu ul > li > a {
+    font-size: 16px;
+  }
+
+  /* GNB 하위메뉴 */
+  .gnb-menu ol li {
+    font-size: 14px;
+  }
+
+  /* 게임시작 버튼 크기 조절 */
+  .top-menu li:nth-child(3) a:first-child,
+  .top-menu li:nth-child(3) a:nth-child(2) {
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .top-menu li:nth-child(3) img {
+    width: 74px;
+    height: 17px;
+  }
+}
+
+/************************** 1280 이하 미디어쿼리 **************************/
+@media screen and (max-width: 1280px) {
+  body {
+    padding-top: 55px;
+  }
+
+  .inbox {
+    margin: 0 auto;
+  }
+
+  .top-area {
+    padding: 0 10px;
+    height: 55px;
+  }
+
+  /* 햄버거 버튼 */
+  .mobile-menu {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    width: 44px;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+  .mobile-menu span {
+    width: 20px;
+    height: 3px;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+
+  /* 햄버거 메뉴 활성화 시 X 모양으로 변경 */
+  .mobile-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .mobile-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* menu-box 정렬 방식 변경 */
+  .menu-box {
+    justify-content: flex-start;
+  }
+
+  /* 상단 메뉴 숨김 */
+  .gnb-menu {
+    display: none;
+  }
+
+  .gnb-menu::before {
+    display: none;
+  }
+
+  /* 로고 크기 조절 */
+  .logo-box {
+    width: 84px;
+    height: 55px;
+    margin-left: 10px;
+    margin-right: auto;
+  }
+
+  /* 로고 이미지 변경 */
+  .logo-box img {
+    content: url(../image/logo_small.svg);
+    max-width: 84px;
+    height: auto;
+    display: block;
+  }
+
+  /* 회원가입, 서치 아이콘 마우스 오버시 색 변경 아이콘 제거 */
+  .top-menu li:nth-child(1):hover > a:first-child,
+  .top-menu li:nth-child(2):hover > a:first-child {
+    display: block;
+  }
+
+  .top-menu li:nth-child(1):hover > a:last-child,
+  .top-menu li:nth-child(2):hover > a:last-child {
+    display: none;
+  }
+
+  /* 배너 */
+  .banner-part {
+    padding: 25px 20px 0 20px;
+  }
+
+  /* SNS 아이콘 박스 마우스 오버시 색 변경 제거 */
+  .sns-icon a:hover {
+    background: #ffffff;
+  }
+
+  /* SNS 아이콘 마우스 오버시 이미지 변경 제거 */
+  .sns-icon a:hover img:last-child {
+    display: none;
+  }
+
+  .sns-icon a:hover img:first-child {
+    display: block;
+  }
+
+  /* 에린 소식 */
+  .news-part {
+    height: auto;
+  }
+
+  .news-list-box ul.news-list.show {
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  /* 에린소식 하위메뉴 마우스 오버시 색 변경 제거 */
+  .news-type button:hover {
+    color: #525252;
+    background-color: #f6f4f4;
+    border-color: #525252;
+  }
+
+  /* 선택된 상태 유지 */
+  .news-type button.on {
+    color: #fff;
+    background: #5c5c5c;
+    border-color: #5c5c5c;
+  }
+
+  /* 에린소식 박스 마우스 오버시 이동 제거 */
+  .news-list-box li:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .news-list-box a {
+    font-size: 16px;
+  }
+
+  .community-part {
+    height: auto;
+  }
+
+  /* 커뮤니티, 클래스 flex */
+  .community-part > ul {
+    flex-direction: column;
+  }
+
+  .community-list a {
+    font-size: 16px;
+  }
+
+  /* 커뮤니티 하위메뉴 마우스 오버시 색 변경 제거 */
+  .community-type button:hover {
+    color: #525252;
+    background-color: #f6f4f4;
+    border-color: #525252;
+  }
+
+  /* 선택된 상태 유지 */
+  .community-type button.on {
+    color: #fff;
+    background: #5c5c5c;
+    border-color: #5c5c5c;
+  }
+
+  /* 커뮤니티 게시글 제목 이동 제거 */
+  .community-list li > a:hover {
+    transform: none;
+  }
+
+  /* 커뮤니티 게시글 제목 마우스 오버시 색 원래대로 */
+  .community-list li > a > span:hover {
+    color: #525252;
+  }
+
+  /* 클래스 이름 마우스 오버시 색 원래대로 */
+  .class-list li > a:hover > span {
+    color: #525252;
+  }
+
+  /* 공식영상 모달 */
+  .video-modal {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .modal-body {
+    padding: 10px 10px;
+  }
+
+  .video-title {
+    font-size: 16px;
+    padding: 20px 0;
+  }
+
+  /* 하단 */
+  .bottom-menu {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .bottom-menu a {
+    font-size: 12px;
+  }
+
+  .bottom-menu a:first-child,
+  .bottom-menu a:nth-child(2),
+  .bottom-menu a:nth-child(4),
+  .bottom-menu a:nth-child(6),
+  .bottom-menu a:last-child {
+    display: none;
+  }
+
+  .bottom-menu a:nth-child(7)::after {
+    display: none;
+  }
+
+  .infomation {
+    display: none;
+  }
+
+  .copyright {
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  /* 하단 로고 */
+  .bottom-logo {
+    padding-bottom: 30px;
+  }
+
+  .copy {
+    font-size: 10px;
+  }
+
+  /* 사이드 버튼 */
+  .scroll-btn {
+    bottom: 60px;
+  }
+
+  /* 위로 */
+  .scroll-top-btn::before {
+    content: "";
+    display: block;
+    min-width: 12px;
+    width: 12px;
+    height: 10px;
+    background: url(../image/scrollsmalltop.svg) no-repeat;
+    background-size: cover;
+  }
+
+  /* 아래로 */
+  .scroll-bottom-btn {
+    display: block;
+  }
+
+  .scroll-bottom-btn::after {
+    content: "";
+    display: block;
+    min-width: 12px;
+    width: 12px;
+    height: 10px;
+    background: url(../image/scrollsmallbottom.svg) no-repeat;
+    background-size: cover;
+  }
+
+  /* 구분선 */
+  .scroll-bottom-btn::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #d9d9d9;
+    margin-bottom: 20px;
+  }
+}
+
+/************************** 750px 이하 미디어쿼리 **************************/
+@media screen and (max-width: 750px) {
+  .inbox {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* 배너 */
+  .banner-group .swiper-slide a .bg::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(36, 38, 45, 0) 50%, #24262d 100%);
+  }
+
+  /* 배너 안 */
+  .banner-group .swiper-slide .text-area {
+    top: auto;
+    bottom: 30px;
+    left: 0;
+    translate: 0 0;
+  }
+
+  .banner-group .swiper-slide .text-area .banner-type {
+    font-size: 10px;
+  }
+
+  /* 하단으로 이동하면 전체 너비 사용 */
+  .banner-group .swiper-slide .title {
+    max-width: 100%;
+  }
+
+  .banner-group .swiper-slide .sub-title {
+    max-width: 100%;
+  }
+
+  .banner-group .swiper-slide .title p {
+    font-size: 22px;
+    line-height: 28.6px;
+    word-break: keep-all;
+  }
+
+  .banner-group .swiper-slide .sub-title p {
+    font-size: 12px;
+    line-height: 20px;
+    word-break: keep-all;
+  }
+
+  /* SNS, 다운로드 */
+  .link-group {
+    padding: 40px 0;
+  }
+
+  .sns-box::before {
+    display: none;
+  }
+
+  .snsbg {
+    width: 100%;
+  }
+
+  .snsbg img {
+    height: 71px;
+  }
+
+  .sns-list {
+    height: 71px;
+  }
+
+  .sns-icon {
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .sns-icon a {
+    width: 138px;
+    height: 48px;
+    border-radius: 10px;
+  }
+
+  .download-list {
+    height: 71px;
+  }
+
+  .download-icon {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .download-icon img {
+    width: 93px;
+    height: 28px;
+  }
+
+  .link-group video {
+    height: 71px;
+  }
+
+  /* 각 영역 h2 사이즈 */
+  .news-top,
+  .community-top,
+  .class-top,
+  .video-top,
+  .guide-top {
+    font-size: 20px;
+  }
+
+  .type {
+    width: min-content;
+    min-width: auto;
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  .community-group,
+  .news-group {
+    align-items: center;
+    gap: 2vh;
+  }
+
+  /* 에린소식 */
+  .news-type {
+    margin: 0;
+  }
+
+  .news-part {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  /* 에린소식 하위메뉴 */
+  .news-type button {
+    font-size: 12px;
+  }
+
+  /* 에린소식 버튼 모양 없애기 */
+  /* .news-type button {
+    border: none;
+  }
+
+  .news-type button.on {
+    border-top: none;
+    padding: 10px 40px;
+    margin: 0;
+  }
+
+  .news-type button.on::before,
+  .news-type button.on::after {
+    display: none;
+  }
+
+  .news-type button.on span::before,
+  .news-type button.on span::after {
+    display: none;
+  } */
+
+  .news-list-box ul.news-list {
+    margin-top: 15px;
+  }
+
+  .news-list-box li {
+    height: min-content;
+    max-height: 130px;
+  }
+
+  .thumnail {
+    max-width: 26%;
+    min-width: 140px;
+  }
+
+  .news-content {
+    padding: 25px 20px;
+  }
+
+  .news-list-box a {
+    font-size: 14px;
+    white-space: nowrap;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .date {
+    font-size: 10px;
+    white-space: nowrap;
+    margin-top: 10px;
+  }
+
+  /* 커뮤니티 */
+  .community-part {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  .community-part > ul {
+    gap: 40px;
+  }
+
+  .community-type {
+    margin: 0;
+  }
+
+  /* 커뮤니티 하위메뉴 */
+  .community-type button {
+    font-size: 12px;
+  }
+
+  /* 커뮤니티 버튼 모양 없애기 */
+  /* .community-type button {
+    border: none;
+  }
+
+  .community-type button.on {
+    border-top: none;
+    padding: 10px 40px;
+    margin: 0;
+  }
+
+  .community-type button.on::before,
+  .community-type button.on::after {
+    display: none;
+  }
+
+  .community-type button.on span::before,
+  .community-type button.on span::after {
+    display: none;
+  } */
+
+  .community-list.show ul {
+    height: auto;
+    margin-top: 15px;
+  }
+
+  .community-list a {
+    font-size: 14px;
+  }
+
+  /* 클래스 */
+  .class-list ul {
+    height: auto;
+    margin-top: 15px;
+  }
+
+  .class-list span {
+    font-size: 14px;
+  }
+
+  /* 공식영상, 가이드 bullet 제거 */
+  .video-title-group .swiper-pagination,
+  .guide-title-group .swiper-pagination {
+    display: none;
+  }
+
+  /* 공식영상 */
+  .video-part {
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .video-group ul {
+    margin-top: 15px;
+  }
+
+  .video-group .swiper-slide {
+    max-width: 244px;
+    min-width: 244px;
+  }
+
+  .text {
+    width: 100%;
+  }
+
+  .text span {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  /* 가이드 */
+  .guide-part {
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  .guide-group ul {
+    margin-top: 15px;
+  }
+
+  .guide-group ul li {
+    max-width: 167px;
+    min-width: 167px;
+  }
+
+  .guide-group a {
+    max-width: 167px;
+    min-width: 167px;
+  }
+
+  .guide-view {
+    max-width: 167px;
+    min-width: 167px;
+  }
+
+  .guide-view img {
+    width: 167px;
+    height: 167px;
+  }
+
+  .swiper-notification {
+    display: none !important;
+    height: 0 !important;
+  }
+
+  /* 각 가이드 글자 크기 */
+  .guide-part span {
+    font-size: 14px;
+  }
+
+  /* 로그인 페이지 - 일회용 로그인 */
+  .otp-input-group input {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+/************************** 600px 이하 미디어쿼리 **************************/
+@media screen and (max-width: 600px) {
+  /* 클래스 이미지 크기 */
+  .class-list img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/************************** 500px 이하 미디어쿼리 **************************/
+@media screen and (max-width: 500px) {
+  /* 에린소식 하위메뉴 flex */
+  .news-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1vh;
+  }
+
+  /* 하위메뉴 크기 조절 */
+  .news-title-group {
+    width: 100%;
+  }
+
+  .news-type {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .news-type button {
+    flex: 1;
+    margin-right: 8px;
+  }
+
+  .news-type button:last-child {
+    margin-right: 0;
+  }
+
+  /* 에린 소식 박스 글자 크기 */
+  .news-list-box a {
+    font-size: 12px;
+  }
+
+  /* 커뮤니티 하위메뉴 flex */
+  .community-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1vh;
+  }
+
+  /* 하위메뉴 크기 조절 */
+  .community-title-group {
+    width: 100%;
+  }
+  .community-type {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .community-type button {
+    flex: 1;
+    margin-right: 8px;
+  }
+
+  .community-type button:last-child {
+    margin-right: 0;
+  }
+
+  /* 커뮤니티 박스 padding */
+  .community-list.show ul {
+    padding: 20px 25px;
+  }
+
+  /* 커뮤니티 박스 내용 flex */
+  .community-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  /* 커뮤니티 박스 글자 크기 */
+  .community-list a {
+    font-size: 12px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .community-list a span {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* 클래스 박스 padding */
+  .class-list ul {
+    padding: 20px 25px;
+  }
+
+  /* 클래스 이미지 크기 */
+  .class-list img {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* 클래스 글자 크기 */
+  .class-list span {
+    font-size: 12px;
+  }
+
+  /* 각 공식영상 글자 크기 */
+  .video-group span {
+    font-size: 12px;
+  }
+
+  /* 각 가이드 글자 크기 */
+  .guide-part span {
+    font-size: 12px;
+  }
+}
+
+/************************** 450px 이하 미디어쿼리 **************************/
+@media screen and (max-width: 450px) {
+  /* 상단 아이콘 이미지 크기 */
+  .top-menu li > a > img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* SNS, 다운로드 */
+  .download-icon img {
+    width: 86px;
+    height: 26px;
+  }
+
+  .sns-icon a {
+    width: 100px;
+    height: 45px;
+  }
+
+  .sns-icon img {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* 클래스 grid */
+  .class-list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: auto;
+    gap: 20px 10px;
+    padding: 20px;
+  }
+}
+
+/************************** 350px 이하 미디어쿼리 **************************/
+@media screen and (max-width: 350px) {
+  /* 사이드 메뉴 */
+  .sidebar-menu {
+    width: 280px;
+  }
+}

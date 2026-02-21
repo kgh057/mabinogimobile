@@ -1,0 +1,648 @@
+@charset "UTF-8";
+
+/* 외부 CSS 불러오기 */
+@import url(./reset.css);
+@import url(./core.css);
+/* 16그리드 CSS */
+@import url(./grid_16_flex.css);
+
+/* 공사중 표시 */
+/* body * {
+  outline: 2px dashed blue;
+} */
+
+body {
+  /* 상단영역 고정 position:fixed로 다른 콘텐츠가 상단에 가려지지 않게 */
+  padding-top: 107px;
+}
+
+/* 메인 CSS */
+/******************** 1. 상단영역 ********************/
+/* 상단영역 최상위 부모박스 */
+#top-area {
+  position: relative;
+  /* 상단영역이 항상 위 */
+  z-index: 9999;
+  height: 107px;
+}
+
+/* 가상요소로 배경넣기 */
+#top-area::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #ffffff;
+  z-index: -1;
+  transition: 0.4s ease-out;
+}
+
+/* 상단요소 클래스on줄때 가상요소 */
+#top-area.on::before {
+  height: 350px;
+}
+
+/* 상단영역 최상위 속박스 */
+.top-area {
+  /* 상단영역 고정 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  height: 107px;
+  z-index: 9999;
+  padding: 0 70px;
+  box-sizing: border-box;
+}
+
+/* 상단영역 최상위 flex박스 */
+.menu-box {
+  display: flex;
+  height: 100%;
+}
+
+/* 메뉴그룹 플렉스 */
+.menu-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* 로고 박스 */
+.logo-box {
+  width: 132px;
+  height: 107px;
+  text-align: center;
+  /* margin-left: 40px; */
+}
+.logo-box img {
+  position: relative;
+  top: 50%;
+  translate: 0 -50%;
+}
+
+/* 상단영역 메뉴 공통 플렉스 */
+.menu-group {
+  /* 플렉스 자식요소로 flex:1 설정시 모두 1주면 등분할, 다른요소가 특정 px이고
+  나머지 자식에 flex:1 주면 등분할채우기! */
+  flex: 1;
+}
+
+/* 상단영역 메뉴 공통 플렉스 */
+.menu-group > * > ul {
+  display: flex;
+  align-items: center;
+}
+
+/* 탑메뉴 */
+.top-menu > ul {
+  gap: 10px;
+}
+
+/* 탑메뉴 아이콘 이미지 */
+.top-menu li > a > img {
+  width: 45px;
+  height: 45px;
+}
+
+/* 탑메뉴 색 변경 아이콘 숨김 */
+.top-menu li:nth-child(1) > a:last-child {
+  display: none;
+}
+.top-menu li:nth-child(2) > a:last-child {
+  display: none;
+}
+
+/* 탑메뉴 아이콘 마우스 오버시 색 변경 아이콘 등장 */
+.top-menu li:hover > a:last-child {
+  display: block;
+}
+
+/* 탑메뉴 아이콘 마우스 오버시 기존 아이콘 숨김 */
+.top-menu li:hover > a:first-child {
+  display: none;
+}
+
+/* 게임 박스, 글자 부모 자격 */
+.top-menu li:nth-child(3) {
+  position: relative;
+}
+
+/* 게임시작 박스 */
+.top-menu li:nth-child(3) a:first-child,
+.top-menu li:nth-child(3) a:nth-child(2) {
+  position: relative;
+  display: block;
+  width: 197px;
+  height: 57px;
+  border-radius: 20px;
+  overflow: hidden;
+  /* margin-right: 15px; */
+}
+
+/* 게임시작 영상 */
+.top-menu video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 1.3;
+}
+
+/* 게임시작 색 변경 영상 숨김 */
+.top-menu li:nth-child(3) a:nth-child(2) {
+  display: none;
+}
+
+/* 게임시작 마우스 오버시 색 변경 영상 등장 */
+.top-menu li:nth-child(3):hover a:nth-child(2) {
+  display: block;
+}
+
+/* 게임시작 마우스 오버시 기존 영상 숨김 */
+.top-menu li:nth-child(3):hover a:first-child {
+  display: none;
+}
+
+/* 게임시작 글자 위치 */
+.top-menu li:nth-child(3) a:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+/* 게임시작 글자이미지 */
+.top-menu li:nth-child(3) img {
+  width: 123px;
+  height: 28px;
+  /* margin-right: 15px; */
+}
+
+/* 로고,GNB메뉴 박스 */
+.gnb-menu {
+  display: flex;
+  gap: 20px;
+  /* align-items: center; */
+  /* padding-bottom: 20px; */
+  background-color: #ffffff;
+  height: 100%;
+  transition: 0.4s ease-out;
+  padding-left: 65px;
+}
+
+/* GNB메뉴 */
+.gnb-menu > ul {
+  font-size: 1.8rem;
+  gap: 6.5rem;
+}
+
+.gnb-menu ul > li {
+  position: relative;
+  /* 부모자격 */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* 상위메뉴 a */
+.gnb-menu ul > li > a {
+  font-size: 18px;
+  line-height: 107px;
+}
+
+.gnb-menu ol.smenu {
+  position: absolute;
+  left: 50%;
+  width: 150px;
+  height: 0;
+  transform: translateX(-50%);
+  overflow: hidden;
+  transition: 0.2s ease-out;
+  padding-top: 30px;
+}
+.gnb-menu ol.smenu a {
+  color: #808080;
+  padding-bottom: 15px;
+}
+
+.gnb-menu:hover ol.smenu {
+  height: 300px;
+  z-index: 1;
+  transition: 0.3s ease-out 0.2s;
+}
+
+.gnb-menu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 107px;
+  width: 100%;
+  height: 0;
+  background-color: #f6f4f4f3;
+  transition: 0.2s ease-out;
+}
+
+.gnb-menu:hover::before {
+  height: 300px;
+}
+
+.gnb-menu ol li {
+  font-size: 16px;
+  line-height: 2;
+}
+
+/* GNB메뉴 오버시 글자색 변경 -> 검정색 */
+.gnb-menu ul > li > a:hover {
+  color: #000;
+}
+
+/* 하위메뉴 오버시 글자색 변경 */
+.gnb-menu ol li a:hover {
+  color: #00b670;
+}
+
+/******************** 2. 메인영역 ********************/
+#main-area {
+  position: relative;
+}
+
+.main-area {
+  max-width: 1740px;
+  padding: 90px 60px 140px;
+  text-align: center;
+}
+
+.search-list {
+  display: block;
+  width: min-content;
+  margin: 0 auto 30px;
+}
+
+.search-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #525252;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.search-input input {
+  padding: 10px 40px 10px 10px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  color: #525252;
+  font-size: 16px;
+}
+
+.search-input input::placeholder {
+  color: #aaa;
+}
+
+.search-input button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.search-input button::before {
+  display: block;
+  content: "";
+  min-width: 21px;
+  width: 21px;
+  height: 24px;
+  background-image: url(../image/search_page_icon.svg);
+  background-size: cover;
+}
+
+.type-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.dropdown {
+  position: relative;
+  min-width: 150px;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 16px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.dropdown-btn:hover {
+  border-color: #999;
+}
+
+.dropdown-btn .arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 10px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #666;
+  transition: transform 0.3s;
+}
+
+.dropdown.active .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: auto;
+  min-width: 200px;
+  background-color: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  z-index: 100;
+  padding: 0;
+}
+
+.dropdown.active .dropdown-menu {
+  max-height: 700px;
+  opacity: 1;
+  overflow-y: auto;
+}
+
+/* 전체 게시판 드롭다운 - 2열 그리드 */
+.type-all .dropdown-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 40px;
+  min-width: 600px;
+  padding: 15px 20px;
+}
+
+/* 전체 게시판 버튼 (검정 배경) */
+.type-all .dropdown-menu > li:first-child {
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.type-all .dropdown-menu > li:first-child > a {
+  display: block;
+  padding: 12px 20px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #2c2c2c;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.type-all .dropdown-menu > li:first-child > a:hover {
+  background: #3c3c3c;
+}
+
+.dropdown-menu > li {
+  list-style: none;
+}
+
+.dropdown-menu > li > a {
+  display: block;
+  padding: 12px 15px;
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  border-radius: 8px;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: #f5f5f5;
+}
+
+/* 카테고리 그룹 */
+.category-group {
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+/* 카테고리 그룹 제목 (회색 배경) */
+.category-group h1 {
+  display: block;
+  font-size: 15px;
+  font-weight: normal;
+  color: #555;
+  text-align: left;
+  border-radius: 15px;
+  background: #ececec;
+  padding: 10px 18px;
+  margin-bottom: 8px;
+}
+
+/* 하위 카테고리 리스트 */
+.category-group .sub-category {
+  display: block;
+  list-style: none;
+  padding-left: 0;
+}
+
+.category-group .sub-category li {
+  margin-bottom: 0;
+}
+
+.category-group .sub-category li a {
+  display: block;
+  padding: 7px 18px;
+  color: #666;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  border-radius: 8px;
+}
+
+.category-group .sub-category li a:hover {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* 제목+내용 드롭다운 */
+.type-content .dropdown-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  min-width: 280px;
+}
+
+.type-content .dropdown-menu > li > a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.type-content .dropdown-menu > li > a:hover {
+  background-color: #f5f5f5;
+}
+
+/* 말머리 선택 드롭다운 */
+.type-category .dropdown-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  min-width: 300px;
+}
+
+.type-category .dropdown-menu > li > a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.type-category .dropdown-menu > li > a:hover {
+  background-color: #f5f5f5;
+}
+
+.list-empty {
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+/******************** 3. 하단영역 ********************/
+/* 겉박스 */
+#bottom-area {
+  background: #f6f4f4;
+  /* background: #ffffff;
+  border-top: #5c5c5c solid 1px; */
+  /* background: url(../image/class_bg.png) no-repeat center; */
+}
+
+/* 속박스 */
+.bottom-area {
+  position: relative;
+  width: 100%;
+  height: 180px;
+}
+
+.bottom-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 33px;
+  box-sizing: border-box;
+}
+
+.bottom-menu a {
+  font-size: 14px;
+  color: #5c5c5c;
+  display: flex;
+  align-self: center;
+}
+
+/* 개인정보처리방침 */
+.bottom-menu a:nth-child(5) {
+  color: #00b670;
+}
+
+.bottom-menu a::after {
+  display: block;
+  content: "";
+  width: 3px;
+  height: 20px;
+  background-image: url(../image/bottom-bar.png);
+  margin: 0 10px;
+}
+
+/* 회사 소개 flex */
+.infomation ul {
+  max-width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+/* 회사 소개 */
+.infomation li {
+  font-size: 12px;
+  color: #888;
+  margin-right: 10px;
+}
+
+/* 회사 소개 - 사업자정보확인 */
+.infomation li:last-child a {
+  color: #888;
+  text-decoration: underline;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 35px;
+  box-sizing: border-box;
+}
+
+/* 하단 로고 (넥슨, 데브캣) */
+.bottom-logo {
+  display: flex;
+  margin-right: 20px;
+}
+
+/* 넥슨 로고 */
+.bottom-logo a:first-child {
+  display: block;
+  width: 84px;
+  height: 24px;
+  margin-right: 20px;
+  background-image: url(../image/nexon.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+/* 데브캣 로고 */
+.bottom-logo a:last-child {
+  display: block;
+  width: 96px;
+  height: 20px;
+  background-image: url(../image/devcat_logo.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.copy {
+  font-size: 12px;
+  color: #5c5c5c;
+}
