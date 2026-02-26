@@ -960,7 +960,9 @@ body.sidebar-open {
 .date {
   font-size: 12px;
   color: #aaaaaa;
-}
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;}
 
 /******************** 커뮤니티영역 ********************/
 /* 겉박스 */
