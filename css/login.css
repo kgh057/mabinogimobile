@@ -238,7 +238,7 @@
   margin-top: 0;
 }
 
-/* 계정 로그인 버튼 마우스 오버시 */
+/* 계정 로그인 버튼 마우스 호버시 */
 .other-login button:hover {
   background-color: #eee;
 }

@@ -131,7 +131,7 @@
     display: block;
   }
 
-  /* 회원가입, 서치 아이콘 마우스 오버시 색 변경 아이콘 제거 */
+  /* 회원가입, 서치 아이콘 마우스 호버시 색 변경 아이콘 제거 */
   .top-menu li:nth-child(1):hover > a:first-child,
   .top-menu li:nth-child(2):hover > a:first-child {
     display: block;
@@ -147,12 +147,12 @@
     padding: 25px 20px 0 20px;
   }
 
-  /* SNS 아이콘 박스 마우스 오버시 색 변경 제거 */
+  /* SNS 아이콘 박스 마우스 호버시 색 변경 제거 */
   .sns-icon a:hover {
     background: #ffffff;
   }
 
-  /* SNS 아이콘 마우스 오버시 이미지 변경 제거 */
+  /* SNS 아이콘 마우스 호버시 이미지 변경 제거 */
   .sns-icon a:hover img:last-child {
     display: none;
   }
@@ -171,7 +171,7 @@
     gap: 2vh;
   }
 
-  /* 에린소식 하위메뉴 마우스 오버시 색 변경 제거 */
+  /* 에린소식 하위메뉴 마우스 호버시 색 변경 제거 */
   .news-type button:hover {
     color: #525252;
     background-color: #f6f4f4;
@@ -185,7 +185,7 @@
     border-color: #5c5c5c;
   }
 
-  /* 에린소식 박스 마우스 오버시 이동 제거 */
+  /* 에린소식 박스 마우스 호버시 이동 제거 */
   .news-list-box li:hover {
     transform: none;
     box-shadow: none;
@@ -208,7 +208,7 @@
     font-size: 16px;
   }
 
-  /* 커뮤니티 하위메뉴 마우스 오버시 색 변경 제거 */
+  /* 커뮤니티 하위메뉴 마우스 호버시 색 변경 제거 */
   .community-type button:hover {
     color: #525252;
     background-color: #f6f4f4;
@@ -227,12 +227,12 @@
     transform: none;
   }
 
-  /* 커뮤니티 게시글 제목 마우스 오버시 색 원래대로 */
+  /* 커뮤니티 게시글 제목 마우스 호버시 색 원래대로 */
   .community-list li > a > span:hover {
     color: #525252;
   }
 
-  /* 클래스 이름 마우스 오버시 색 원래대로 */
+  /* 클래스 이름 마우스 호버시 색 원래대로 */
   .class-list li > a:hover > span {
     color: #525252;
   }

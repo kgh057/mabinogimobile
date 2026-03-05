@@ -2,7 +2,7 @@
 
 // const gnbMenu = document.querySelector(".gnb-menu");
 
-// // 2. 상단영역 메뉴박스 - 마우스오버시 서브메뉴 보이기
+// // 2. 상단영역 메뉴박스 - 마우스호버시 서브메뉴 보이기
 // gnbMenu.addEventListener("mouseover", function (e) {
 //   document.querySelector("#top-area").classList.add("on");
 // });
@@ -274,7 +274,7 @@ communityButtons.forEach((button) => {
   });
 });
 
-/****************** 클래스 아이콘 이미지 오버시 색 변경 ******************/
+/****************** 클래스 아이콘 이미지 호버시 색 변경 ******************/
 // 1280px 이상에서만 적용
 document.querySelectorAll(".class-list a").forEach((item) => {
   item.addEventListener("mouseenter", function (e) {

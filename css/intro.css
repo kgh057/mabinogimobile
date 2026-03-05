@@ -136,7 +136,7 @@ body {
   filter: brightness(0.7);
 }
 
-/* 배너영역 아이콘 마우스 오버시 */
+/* 배너영역 아이콘 마우스 호버시 */
 .left-icon a:hover {
   filter: brightness(1);
 }
@@ -192,12 +192,12 @@ body {
   display: none;
 }
 
-/* 게임시작 마우스 오버시 색 변경 영상 등장 */
+/* 게임시작 마우스 호버시 색 변경 영상 등장 */
 .gamestart:hover a:nth-child(3) {
   display: block;
 }
 
-/* 게임시작 마우스 오버시 기존 영상 숨김 */
+/* 게임시작 마우스 호버시 기존 영상 숨김 */
 .gamestart:hover a:nth-child(2) {
   display: none;
 }

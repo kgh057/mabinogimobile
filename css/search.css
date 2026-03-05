@@ -117,12 +117,12 @@ body {
   display: none;
 }
 
-/* 탑메뉴 아이콘 마우스 오버시 색 변경 아이콘 등장 */
+/* 탑메뉴 아이콘 마우스 호버시 색 변경 아이콘 등장 */
 .top-menu li:hover > a:last-child {
   display: block;
 }
 
-/* 탑메뉴 아이콘 마우스 오버시 기존 아이콘 숨김 */
+/* 탑메뉴 아이콘 마우스 호버시 기존 아이콘 숨김 */
 .top-menu li:hover > a:first-child {
   display: none;
 }
@@ -158,12 +158,12 @@ body {
   display: none;
 }
 
-/* 게임시작 마우스 오버시 색 변경 영상 등장 */
+/* 게임시작 마우스 호버시 색 변경 영상 등장 */
 .top-menu li:nth-child(3):hover a:nth-child(2) {
   display: block;
 }
 
-/* 게임시작 마우스 오버시 기존 영상 숨김 */
+/* 게임시작 마우스 호버시 기존 영상 숨김 */
 .top-menu li:nth-child(3):hover a:first-child {
   display: none;
 }
@@ -255,12 +255,12 @@ body {
   line-height: 2;
 }
 
-/* GNB메뉴 오버시 글자색 변경 -> 검정색 */
+/* GNB메뉴 호버시 글자색 변경 -> 검정색 */
 .gnb-menu ul > li > a:hover {
   color: #000;
 }
 
-/* 하위메뉴 오버시 글자색 변경 */
+/* 하위메뉴 호버시 글자색 변경 */
 .gnb-menu ol li a:hover {
   color: #00b670;
 }

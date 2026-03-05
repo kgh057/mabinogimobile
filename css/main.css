@@ -357,12 +357,12 @@ body.sidebar-open {
   line-height: 2;
 }
 
-/* GNB메뉴 오버시 글자색 변경 -> 검정색 */
+/* GNB메뉴 호버시 글자색 변경 -> 검정색 */
 .gnb-menu ul > li > a:hover {
   color: #000;
 }
 
-/* 하위메뉴 오버시 글자색 변경 */
+/* 하위메뉴 호버시 글자색 변경 */
 .gnb-menu ol li a:hover {
   color: #00b670;
 }
@@ -400,12 +400,12 @@ body.sidebar-open {
   display: none;
 }
 
-/* 탑메뉴 아이콘 마우스 오버시 색 변경 아이콘 등장 */
+/* 탑메뉴 아이콘 마우스 호버시 색 변경 아이콘 등장 */
 .top-menu li:hover > a:last-child {
   display: block;
 }
 
-/* 탑메뉴 아이콘 마우스 오버시 기존 아이콘 숨김 */
+/* 탑메뉴 아이콘 마우스 호버시 기존 아이콘 숨김 */
 .top-menu li:hover > a:first-child {
   display: none;
 }
@@ -441,12 +441,12 @@ body.sidebar-open {
   display: none;
 }
 
-/* 게임시작 마우스 오버시 색 변경 영상 등장 */
+/* 게임시작 마우스 호버시 색 변경 영상 등장 */
 .top-menu li:nth-child(3):hover a:nth-child(2) {
   display: block;
 }
 
-/* 게임시작 마우스 오버시 기존 영상 숨김 */
+/* 게임시작 마우스 호버시 기존 영상 숨김 */
 .top-menu li:nth-child(3):hover a:first-child {
   display: none;
 }
@@ -689,7 +689,7 @@ body.sidebar-open {
   background: #ffffff;
 }
 
-/* 아이콘 박스 마우스 오버시 색 변경 */
+/* 아이콘 박스 마우스 호버시 색 변경 */
 .sns-icon a:hover {
   background: #2baf7e;
 }
@@ -699,12 +699,12 @@ body.sidebar-open {
   display: none;
 }
 
-/* 마우스 오버시 색 변경된 아이콘 등장 */
+/* 마우스 호버시 색 변경된 아이콘 등장 */
 .sns-icon a:hover img:last-child {
   display: block;
 }
 
-/* 마우스 오버시 기존 아이콘 숨김 */
+/* 마우스 호버시 기존 아이콘 숨김 */
 .sns-icon a:hover img:first-child {
   display: none;
 }
@@ -818,7 +818,7 @@ body.sidebar-open {
   margin-right: 0;
 }
 
-/* 에린소식 하위메뉴 버튼 마우스 오버시 */
+/* 에린소식 하위메뉴 버튼 마우스 호버시 */
 .news-type button:hover {
   color: #fff;
   background-color: #5c5c5c;
@@ -901,11 +901,11 @@ body.sidebar-open {
   border-radius: 20px;
   overflow: hidden;
 
-  /* 에린소식 박스 마우스 오버시 이동 부드럽게 */
+  /* 에린소식 박스 마우스 호버시 이동 부드럽게 */
   transition: all 0.3s;
 }
 
-/* 에린소식 박스 마우스 오버시 그림자, 이동 */
+/* 에린소식 박스 마우스 호버시 그림자, 이동 */
 .news-list-box li:hover {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
@@ -1053,7 +1053,7 @@ body.sidebar-open {
   margin-right: 0;
 }
 
-/* 커뮤니티 하위메뉴 마우스 오버시 */
+/* 커뮤니티 하위메뉴 마우스 호버시 */
 .community-type button:hover {
   color: #fff;
   background-color: #5c5c5c;
@@ -1185,19 +1185,19 @@ body.sidebar-open {
   overflow: hidden;
   text-overflow: ellipsis;
 
-  /* 오버시 이동 부드럽게 */
+  /* 호버시 이동 부드럽게 */
   transition: 0.3s;
 
   flex: 1;
   min-width: 0;
 }
 
-/* 커뮤니티 제목 오버시 글자 위치 이동 */
+/* 커뮤니티 제목 호버시 글자 위치 이동 */
 .community-list li > a:hover {
   transform: translateY(-2px);
 }
 
-/* 커뮤니티 제목 오버시 글자색 변경 */
+/* 커뮤니티 제목 호버시 글자색 변경 */
 .community-list li > a > span:hover {
   color: #00b670;
 }
@@ -1248,7 +1248,7 @@ body.sidebar-open {
   flex-wrap: wrap;
 }
 
-/* 클래스 아이콘 오버시 글자색 변경 */
+/* 클래스 아이콘 호버시 글자색 변경 */
 .class-list li > a:hover > span {
   color: #00b670;
 }
@@ -1257,7 +1257,7 @@ body.sidebar-open {
 .class-list img {
   width: 75px;
   height: 75px;
-  /* 오버시 크기 변경 부드럽게 */
+  /* 호버시 크기 변경 부드럽게 */
   transition: 0.3s;
 }
 
@@ -1594,11 +1594,11 @@ pointer: fine = 정밀한 포인터 (마우스, 트랙패드) */
   width: 200px;
   height: 200px;
   object-fit: cover;
-  /* 오버시 부드럽게 */
+  /* 호버시 부드럽게 */
   transition: 0.3s;
 }
 
-/* 가이드 이미지 마우스 오버시 */
+/* 가이드 이미지 마우스 호버시 */
 @media (hover: hover) and (pointer: fine) and (min-width: 1280px) {
   .guide-view img:hover {
     scale: 1.2;
