@@ -332,6 +332,16 @@
     background: #d9d9d9;
     margin-bottom: 20px;
   }
+
+  /* 로그인 페이지 - 로그인 버튼 마우스 호버시 제거 */
+  .login-btn button:hover {
+    background-color: #000;
+  }
+
+  /* 다른 계정 로그인 마우스 호버시 제거 */
+  .other-login button:hover{
+    background-color: #fff;
+  }
 }
 
 /************************** 750px 이하 미디어쿼리 **************************/
