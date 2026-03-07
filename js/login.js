@@ -1,4 +1,4 @@
-// 🆕 탭 전환 기능
+// 탭 전환 기능
 document.addEventListener("DOMContentLoaded", function () {
   const tabButtons = document.querySelectorAll(".tab-type button");
   const loginInput = document.querySelector(".login-input");
@@ -88,6 +88,16 @@ document
 document.getElementById("user-pw").addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     document.querySelector(".login-btn button").click();
+  }
+});
+
+// 빈 화면 터치 시 키보드 닫기 (모바일)
+document.addEventListener("touchstart", function (e) {
+  const activeEl = document.activeElement;
+  const isInput =
+    activeEl.tagName === "INPUT" || activeEl.tagName === "TEXTAREA";
+  if (isInput && !e.target.closest("input, textarea")) {
+    activeEl.blur();
   }
 });
 
