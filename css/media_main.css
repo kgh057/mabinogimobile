@@ -357,6 +357,10 @@
   }
 
   /* 배너 */
+  .banner-group .swiper-slide {
+    overflow: hidden;
+  }
+
   .banner-group .swiper-slide a {
     position: relative;
     padding-bottom: 74%;
