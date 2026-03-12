@@ -361,6 +361,7 @@
     position: relative;
     padding-bottom: 74%;
     width: 100%;
+    box-sizing: border-box;
   }
 
   .banner-group .swiper-slide a .bg {
