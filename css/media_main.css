@@ -357,6 +357,20 @@
   }
 
   /* 배너 */
+  .banner-group .swiper-slide a {
+    position: relative;
+    padding-bottom: 74%;
+    width: 100%;
+  }
+
+  .banner-group .swiper-slide a .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   .banner-group .swiper-slide a .bg::before {
     content: "";
     display: block;
