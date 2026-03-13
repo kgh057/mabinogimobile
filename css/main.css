@@ -15,7 +15,7 @@ body {
   /* 상단영역 고정 position:fixed로 다른 콘텐츠가 상단에 가려지지 않게 */
   padding-top: 107px;
   min-width: 335px;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 .inbox {
@@ -946,14 +946,14 @@ body.sidebar-open {
 /* 소식 제목 */
 .news-list-box a {
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   color: #525252;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 
   /* 위아래 패딩 */
-  padding: 30px 0 41px 0;
+  padding: 32px 0 41px 0;
 }
 
 /* 날짜 */
@@ -1179,7 +1179,7 @@ body.sidebar-open {
 
 /* 커뮤니티 제목 */
 .community-list a {
-  font-size: 18px;
+  font-size: 16px;
   color: #525252;
   white-space: nowrap;
   overflow: hidden;
