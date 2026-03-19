@@ -1618,8 +1618,7 @@ pointer: fine = 정밀한 포인터 (마우스, 트랙패드) */
 /* 겉박스 */
 #bottom-area {
   background: #f6f4f4;
-  /* background: #ffffff;
-  border-top: #5c5c5c solid 1px; */
+  /* border-top: 1px solid #f6f4f4; */
   /* background: url(../image/class_bg.png) no-repeat center; */
 }
 
